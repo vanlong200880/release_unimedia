@@ -1,0 +1,2 @@
+[11-Nov-2015 12:48:47 UTC] PHP Warning:  fileperms() [<a href='function.fileperms'>function.fileperms</a>]: stat failed for /home/unimedia/public_html/index.php in /home/unimedia/public_html/wp-admin/includes/file.php on line 891
+[11-Nov-2015 13:06:50 UTC] PHP Warning:  set_time_limit() has been disabled for security reasons in /home/unimedia/public_html/wp-content/plugins/qtranslate-x/admin/qtx_update_gettext_db.php on line 37
