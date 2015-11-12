@@ -229,18 +229,24 @@
 		border-color: transparent;
 		padding-right: 0;
 		padding-left: 0;
+		margin-top: 10px;
 	}
-	#header .wrapp-form-search-sp .form-inline{
+	#header .wrapp-form-search-sp .navbar-form{
+		margin-top: 0;
+		padding:0 15px;
+	}
+	#header .wrapp-form-search-sp .form-inline div.form-group-sp{
 		position: relative;
 	}
-	#header .wrapp-form-search-sp .form-inline button.btn-default {
+	#header .wrapp-form-search-sp .form-inline div.form-group-sp button.btn {
 	    margin-top: 0px;
-	    padding: 6px 12px;
+	    padding: 7px 12px;
 	    position: absolute;
 	    background-color: #2A255C;
 	    right: 0;
 	    top: 0;
 	    border-radius: 0;
+	    border:none;
 	}
 	#header .wrapp-form-search-sp .form-inline button i.fa{
 	    color: #fff;
@@ -329,6 +335,9 @@
 	}
 	#wrap-new-adv .top-sub-adv .mg-20{
 		margin-bottom: 10px;
+	}
+	#wrap-new-adv .big-new-adv{
+		height: auto;
 	}
 	.article-all .show-article figure figcaption{
 		margin-bottom: 30px;

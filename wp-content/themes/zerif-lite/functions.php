@@ -139,16 +139,17 @@ function uni_search_form( $form ) {
         
     $keyword = ($language == 'vi')? 'Từ khóa': 'Keyword';
 	$form = '
-	<form class="navbar-form navbar-right hide-search searchform" method="get" id="searchform" role="search" action="' . home_url( '/' ) . '">
+	<form class="navbar-form navbar-right hide-search searchform form-inline" method="get" id="searchform" role="search" action="' . home_url( '/' ) . '">
 		<div class="form-group">
 			'.$html.'
 		</div>
-        <div class="form-group">
+        <div class="form-group form-group-sp">
 			<input type="text" class="form-control" placeholder="'.$keyword.'" value="' . get_search_query() . '" name="s" id="s">
+            <button type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn btn-default">
+                <i class="fa fa-search"></i>
+            </button>
 		</div>
-		<button type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn btn-default">
-			<i class="fa fa-search"></i>
-		</button>
+		
 	</form>';
 
 	return $form;
