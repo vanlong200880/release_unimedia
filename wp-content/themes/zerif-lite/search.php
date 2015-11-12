@@ -16,7 +16,35 @@ global $language;
 
 // search magazine
 $keyword = $_GET['s'];
+$type = $_GET['type'];
 if($keyword):
+    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+    switch ($type){
+    case 'travel-education-magazine':
+        break;
+    case 'taste-event-magazine':
+        break;
+    case 'real-estate-source-magazine':
+        break;
+    case 'health-care-magazine':
+        break;
+    case '4-seasons-promotion':
+        break;
+    default :
+        $args = array(
+            'post_status'    => 'publish',		
+            'order'          => 'DESC',
+            'orderby'        => 'date',
+            'post_type'      => 'post',
+            'posts_per_page' => 10,
+            'category_name'     => 'health-care,taste-event,real-estate-source, travel-education, seasons-promotion',
+            's' => $keyword, 
+            'lang' => 'en'
+        );
+        $the_query = new WP_Query( $args );	
+        var_dump($the_query);
+    }
+    
 	$parent_obj = get_category_by_slug('magazine');
     $args = array(
         'orderby'           => 'name', 

@@ -146,7 +146,6 @@
 		'orderby'        => 'rand',
         'post_type'      => 'post',
         'category_name'  => 'advertisement',
-        
         'post__in' => $list_four_id,
         'posts_per_page' => 4,
 	);
@@ -167,9 +166,8 @@
                         echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
                     }
                 ?>
-                
                 <figcaption>
-                    <p><?php the_title(); ?></p>
+                    <p><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></p>
                     <p>
                          <?php $website = get_post_custom_values('website', get_the_ID()); ?>
                         <span>Website: </span><a href="<?php echo $website[0]; ?>" target="_blank"><?php echo $website[0]; ?></a>

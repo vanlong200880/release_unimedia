@@ -115,10 +115,35 @@ add_action('after_setup_theme', 'zerif_setup');
 /* custom form search */
 function uni_search_form( $form ) {
     global $language;
+    $parent_obj = get_category_by_slug('magazine');
+    $html = '<select name="type" class="form-control">';
+    $choose = ($language == 'vi')? '-- Chọn --': '-- Choose --';
+    $html .= '<option value="">'.$choose.'</option>';
+    if($parent_obj):
+        $args = array(
+            'orderby'           => 'id',
+            'order'             => 'DESC',
+            'parent'            => $parent_obj->term_id,
+            'taxonomy'          => 'category',
+            'hide_empty'        => 1 ,
+            'number'    => 10,
+          );
+        $categories = get_categories( $args );
+        if(!empty($categories)){
+            foreach ($categories as $value){
+                $html .= '<option value="'.$value->slug.'">'.$value->name.'</option>';
+            }
+        }
+    endif;
+    $html .= '</select>';
+        
     $keyword = ($language == 'vi')? 'Từ khóa': 'Keyword';
 	$form = '
 	<form class="navbar-form navbar-right hide-search searchform" method="get" id="searchform" role="search" action="' . home_url( '/' ) . '">
 		<div class="form-group">
+			'.$html.'
+		</div>
+        <div class="form-group">
 			<input type="text" class="form-control" placeholder="'.$keyword.'" value="' . get_search_query() . '" name="s" id="s">
 		</div>
 		<button type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn btn-default">
