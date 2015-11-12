@@ -10,8 +10,7 @@ global $language;
 <section id="wrap-magazine" class="wrap-magazine-related">
     <div class="container">
         <div class="row">
-            <div class="col-md-12"><h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'zerif-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h1></div>
-            <div class="col-md-12">    
+            <div class="col-md-12"><h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'zerif-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h1></div>  
 <?php 
 
 // search magazine
@@ -44,6 +43,7 @@ if(!empty($keyword)):
         );
         $the_query = new WP_Query( $args );	?>
         <?php if($the_query->have_posts()):?>
+            <div class="col-md-12">
                 <div class="title magazine">
                     <h2><?php echo ($language == 'vi') ? 'Tạp chí': 'Magazine'; ?></h2>
                     <div class="line">
@@ -86,10 +86,16 @@ if(!empty($keyword)):
                         } ?>
                     </div>
                 </div>
+            </div>
+            <?php else: ?>
+            <div class="col-md-12"><?php get_template_part( 'content', 'none' ); ?></div>
     <?php    endif; ?>
     <?php } ?>        
 <?php else: ?>
-<div class="col-md-12"><?php get_template_part( 'content', 'none' ); ?></div>
+<div class="col-md-12"> No result. <?php //get_template_part( 'content', 'none' ); ?></div>
 <?php endif; ?>
-                
+            
+        </div>
+    </div>
+</section>
 <?php get_footer(); ?>

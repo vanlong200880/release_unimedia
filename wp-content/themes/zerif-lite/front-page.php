@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<section id="wrap-new-adv">
-    <div class="container">
+<section id="wrap-new-adv" class="animate-bounce-up">
+    <div class="container subject">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <?php get_template_part('template-small/advertisement'); ?>
@@ -17,8 +17,8 @@
 </section><!--end wrap-new-adv-->
 
 
-<section id="wrap-magazine">
-    <div class="container">
+<section id="wrap-magazine" class="animate-bounce-up">
+    <div class="container subject">
         <div class="row">
             <div class="col-md-12">
                     <?php get_template_part('template-small/magazine'); ?>
@@ -28,14 +28,6 @@
     </div>
 </section><!--end wrap-magazine-->
 
-
-<section id="health-taste" class="article-all">
-    <div class="container">
-        <div class="row">
-            
-        </div>
-    </div>
-</section><!--end heath-taste-->
 
 <?php get_template_part('template-small/list_category'); ?>
 

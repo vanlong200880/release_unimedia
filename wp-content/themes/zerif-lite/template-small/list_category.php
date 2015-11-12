@@ -13,8 +13,8 @@ $heath_care_args = array (
     if($heath_care_the_query->have_posts()){ 
         $idObj = get_category_by_slug($heath_care); 
 ?>
-<section id="health-taste" class="article-all">
-    <div class="container">
+<section id="health-taste" class="article-all animate-bounce-up" >
+    <div class="container subject">
         <div class="row">
 <div class="col-md-6 col-sm-6 col-xs-12">          
     <div class="title health">
@@ -212,8 +212,8 @@ $real_estate_source_args = array (
     if($real_estate_source_the_query->have_posts()){ 
         $idObj = get_category_by_slug( $real_estate_source ); 
 ?>
-<section id="real-estate" class="article-all">
-    <div class="container">
+<section id="real-estate" class="article-all animate-bounce-up">
+    <div class="container subject">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="title real">
@@ -286,8 +286,8 @@ $travel_education_args = array (
     if($travel_education_the_query->have_posts()){ 
         $idObj = get_category_by_slug( $travel_education ); 
 ?>
-<section id="real-estate" class="article-all">
-    <div class="container">
+<section id="real-estate" class="article-all animate-bounce-up">
+    <div class="container subject">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="title real">
@@ -360,8 +360,8 @@ $seasion_promotion_args = array (
     if($seasion_promotion_the_query->have_posts()){ 
         $idObj = get_category_by_slug( $seasion_promotion ); 
 ?>
-<section id="real-estate" class="article-all">
-    <div class="container">
+<section id="real-estate" class="article-all animate-bounce-up">
+    <div class="container subject">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="title real">

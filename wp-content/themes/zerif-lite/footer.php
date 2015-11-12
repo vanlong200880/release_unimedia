@@ -86,6 +86,10 @@
 </div>
 
 <?php wp_footer(); ?>
+<?php if(is_front_page()): ?>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.appear.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/custom.js"></script>
+<?php endif; ?>
 <script type="text/javascript">
         $(document).ready(function() {
           $("#owl-product-carousel").owlCarousel({
