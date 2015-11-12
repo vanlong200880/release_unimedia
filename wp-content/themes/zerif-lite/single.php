@@ -127,5 +127,85 @@ get_header(); ?>
 
 <?php get_footer(); ?>
 <?php    else: ?>
-lat trang
+<!DOCTYPE html>
+<?php echo get_template_directory_uri(); ?>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<title>UNIMEDIA</title>
+
+		<meta name="viewport" content="width = 1050, user-scalable = no" />
+		<script src="<?php echo get_template_directory_uri() ?>/js/jquery.js"></script>
+		<!-- <script type="text/javascript" src="extras/jquery.min.1.7.js"></script> -->
+		<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/extras/modernizr.2.5.3.min.js"></script>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/lib/hash.js"></script>
+	</head>
+	<body>
+
+		<div id="canvas">
+			<div class="zoom-icon zoom-icon-in"></div>
+			<div class="magazine-viewport">
+				<div class="container">
+					<div class="magazine">
+						<!-- Next button -->
+						<div ignore="1" class="next-button"></div>
+						<!-- Previous button -->
+						<div ignore="1" class="previous-button"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Thumbnails -->
+			<div class="thumbnails">
+				<div>
+					<ul>
+						<li class="i">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/1-thumb.jpg" width="76" height="100" class="page-1">
+							<span>1</span>
+						</li>
+						<li class="d">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/2-thumb.jpg" width="76" height="100" class="page-2">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/3-thumb.jpg" width="76" height="100" class="page-3">
+							<span>2-3</span>
+						</li>
+						<li class="d">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/4-thumb.jpg" width="76" height="100" class="page-4">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/5-thumb.jpg" width="76" height="100" class="page-5">
+							<span>4-5</span>
+						</li>
+						<li class="d">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/6-thumb.jpg" width="76" height="100" class="page-6">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/7-thumb.jpg" width="76" height="100" class="page-7">
+							<span>6-7</span>
+						</li>
+						<li class="d">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/8-thumb.jpg" width="76" height="100" class="page-8">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/9-thumb.jpg" width="76" height="100" class="page-9">
+							<span>8-9</span>
+						</li>
+						<li class="d">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/10-thumb.jpg" width="76" height="100" class="page-10">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/11-thumb.jpg" width="76" height="100" class="page-11">
+							<span>10-11</span>
+						</li>
+						<li class="i">
+							<img src="<?php echo get_template_directory_uri() ?>/pages/12-thumb.jpg" width="76" height="100" class="page-12">
+							<span>12</span>
+						</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+
+		
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/magazine-inline.js"></script>
+
+	</body>
+</html>
+
+<?php while ( have_posts() ) : the_post(); 
+        get_template_part( 'content', 'single' );
+   endwhile; // end of the loop. ?>
 <?php endif; ?>
