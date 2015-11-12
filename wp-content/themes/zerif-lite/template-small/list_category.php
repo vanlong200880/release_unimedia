@@ -50,12 +50,12 @@ $heath_care_args = array (
                             <?php
                             $excerpt = get_post_custom_values('excerpt', get_the_ID());
                             if(!empty($excerpt)){
-                                echo $excerpt[0];
+								$excerpt = $excerpt[0];
                             }else{
-                                the_excerpt();
+								$excerpt = get_the_excerpt();
                             }
-                             
-                             ?>
+							echo filter_character($excerpt, 16);
+                            ?>
                         </p>
                         <div class="readmore">
                             <span class="left"></span>
@@ -149,10 +149,11 @@ $taste_event_args = array (
                             <?php
                             $excerpt = get_post_custom_values('excerpt', get_the_ID());
                             if(!empty($excerpt)){
-                                echo $excerpt[0];
+								$excerpt = $excerpt[0];
                             }else{
-                                the_excerpt();
+								$excerpt = get_the_excerpt();
                             }
+							echo filter_character($excerpt, 16);
                             ?>
                         </p>
                         <div class="readmore">
@@ -248,10 +249,12 @@ $real_estate_source_args = array (
                             <?php
                             $excerpt = get_post_custom_values('excerpt', get_the_ID());
                             if(!empty($excerpt)){
-                                echo $excerpt[0];
+                                //echo filter_character($excerpt[0], 16);
+								$excerpt = $excerpt[0];
                             }else{
-                                the_excerpt();
+								$excerpt = get_the_excerpt();
                             }
+							echo filter_character($excerpt, 16);
                             ?>
                         </p>
                         <div class="readmore">
@@ -320,10 +323,12 @@ $travel_education_args = array (
                             <?php
                             $excerpt = get_post_custom_values('excerpt', get_the_ID());
                             if(!empty($excerpt)){
-                                echo $excerpt[0];
+                                //echo filter_character($excerpt[0], 16);
+								$excerpt = $excerpt[0];
                             }else{
-                                the_excerpt();
+								$excerpt = get_the_excerpt();
                             }
+							echo filter_character($excerpt, 16);
                             ?>
                         </p>
                         <div class="readmore">
@@ -392,10 +397,12 @@ $seasion_promotion_args = array (
                             <?php
                             $excerpt = get_post_custom_values('excerpt', get_the_ID());
                             if(!empty($excerpt)){
-                                echo $excerpt[0];
+                                //echo filter_character($excerpt[0], 16);
+								$excerpt = $excerpt[0];
                             }else{
-                                the_excerpt();
+								$excerpt = get_the_excerpt();
                             }
+							echo filter_character($excerpt, 16);
                             ?>
                         </p>
                         <div class="readmore">

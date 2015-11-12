@@ -126,7 +126,7 @@
             ),
             array(
                 'key'		 => 'group_advertisement',
-                'value'      => 'seasions_promotion'
+                'value'      => 'seasons_promotion'
             ),
         ),
         'posts_per_page' => 5,

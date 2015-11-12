@@ -101,10 +101,12 @@ get_header(); ?>
                                             <?php echo filter_character(get_the_title(), 8); ?>
                                         </a>
                                         <p>
-                                            <?php 
-                                                $str = (empty(get_field('excerpt')))? get_the_excerpt() : get_field('excerpt');
-                                                echo filter_character($str, 16);
-                                            ?>
+											<?php 
+												$str = get_post_custom_values('excerpt', get_the_ID());
+												$str = (empty($str))? get_the_excerpt() : $str[0];
+												echo filter_character($str, 16);
+											?>
+                                            
                                         </p>
                                         <div class="readmore">
                                             <span class="left"></span>
