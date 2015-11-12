@@ -15,62 +15,35 @@ global $language;
 <?php 
 
 // search magazine
-$keyword = $_GET['s'];
-$type = $_GET['type'];
-if($keyword):
+$keyword = $_REQUEST['s'];
+$type = $_REQUEST['type'];
+if(!empty($keyword)):
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+    $listCategorySlug = '';
     switch ($type){
     case 'travel-education-magazine':
-        break;
     case 'taste-event-magazine':
-        break;
     case 'real-estate-source-magazine':
-        break;
     case 'health-care-magazine':
-        break;
     case '4-seasons-promotion':
+        $listCategorySlug .= $type;
         break;
     default :
+        $listCategorySlug .= 'health-care,taste-event,real-estate-source, travel-education, seasons-promotion';
+    }
+    if(!empty($listCategorySlug)){
         $args = array(
             'post_status'    => 'publish',		
             'order'          => 'DESC',
             'orderby'        => 'date',
             'post_type'      => 'post',
-            'posts_per_page' => 10,
-            'category_name'     => 'health-care,taste-event,real-estate-source, travel-education, seasons-promotion',
-            's' => $keyword, 
-            'lang' => 'en'
+            'paged'             => $paged,
+            'posts_per_page' => 20,
+            'category_name'     => $listCategorySlug,
+            's' => $keyword
         );
-        $the_query = new WP_Query( $args );	
-        var_dump($the_query);
-    }
-    
-	$parent_obj = get_category_by_slug('magazine');
-    $args = array(
-        'orderby'           => 'name', 
-        'order'             => 'ASC',
-        'parent'            => $parent_obj->term_id,
-        'name__like'        => $keyword
-    ); 
-    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-    $terms = get_terms('category', $args);
-    if(!empty($terms)){
-        $dataId = array();
-        foreach ($terms as $value){
-            array_push($dataId, $value->slug);
-        }
-        if($dataId){
-            $magazine_args = array(
-                'post_status'       => 'publish',		
-                'post_type'         => 'post',
-                'paged'             => $paged,
-                'posts_per_page'    => 16,
-                'category_name'     => implode(',', $dataId),
-                'order'             => 'DESC',
-                'orderby'           => 'date',
-            );
-            $magazine_the_query = new WP_Query( $magazine_args );
-            if($magazine_the_query->have_posts()):?>
+        $the_query = new WP_Query( $args );	?>
+        <?php if($the_query->have_posts()):?>
                 <div class="title magazine">
                     <h2><?php echo ($language == 'vi') ? 'Tạp chí': 'Magazine'; ?></h2>
                     <div class="line">
@@ -80,8 +53,8 @@ if($keyword):
                 <div class="show-magazine" >
                     <ul id="owl-product-carousel1" class="row">
                         <?php
-                        while ($magazine_the_query->have_posts()){
-                            $magazine_the_query->the_post(); ?>
+                        while ($the_query->have_posts()){
+                            $the_query->the_post(); ?>
                             <li class="col-md-3">
                                 <figure>
                                     <a href="<?php the_permalink() ?>">
@@ -94,18 +67,6 @@ if($keyword):
                                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
                                             }
                                         ?>
-                                        <?php
-//                                        $attachment_id = get_post_thumbnail_id(get_the_ID());
-//                                        if (!empty($attachment_id)) {
-//                                        echo swe_wp_get_attachment_image($attachment_id, $size = array(436, 616), $icon = 1, $attr = array(
-//                                                                'class' => 'adv-'.$attachment_id,
-//                                                                'id' => '',
-//                                                                'alt' => trim(strip_tags(get_post_meta($attachment_id, '_wp_attachment_image_alt', true))),
-//                                                            ));
-//                                        }else{
-//                                            echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
-//                                        }
-                                    ?>
                                     </a>
                                     <figcaption>
                                         <p><a href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
@@ -120,25 +81,15 @@ if($keyword):
                     <div class="col-md-12">
                         <?php 
                         if(function_exists('wp_pagenavi')){
-                        wp_pagenavi(array('query' => $magazine_the_query));
+                        wp_pagenavi(array('query' => $the_query));
                         
                         } ?>
                     </div>
                 </div>
-    <?php    endif;
-    
-        }
-    }
-    
- ?> 
-            </div>
-            
-        </div>
-    </div>
-</section>
-
+    <?php    endif; ?>
+    <?php } ?>        
 <?php else: ?>
 <div class="col-md-12"><?php get_template_part( 'content', 'none' ); ?></div>
 <?php endif; ?>
-
+                
 <?php get_footer(); ?>
