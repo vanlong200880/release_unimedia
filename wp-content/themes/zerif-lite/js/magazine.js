@@ -48,7 +48,7 @@ function loadPage(page, pageElement) {
 
 	// Load the page
 
-	img.attr('src', 'pages/' +  page + '.jpg');
+	img.attr('src', 'http://localhost:8080/release_unimedia/wp-content/themes/zerif-lite/pages/' +  page + '.jpg');
 
 	loadRegions(page, pageElement);
 

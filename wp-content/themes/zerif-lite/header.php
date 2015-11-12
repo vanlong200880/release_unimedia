@@ -212,14 +212,7 @@ global $language;
 
         <div class="wrapp-form-search-sp">
             <div class="container">
-                <form class="form-inline" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
+                <?php get_search_form(); ?>
             </div>
         </div><!--end wrapp-form-search-sp-->
 
