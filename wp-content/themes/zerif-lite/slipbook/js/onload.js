@@ -1350,7 +1350,8 @@ var Book_v5 = {
          $('#fb5-about').css({'transform':'scale('+zoom+')','-ms-transform':'scale('+zoom+')','-webkit-transform':'scale('+zoom+')'});
          //padding top
          var padding_top=(this.heightBook()*0.05);
-         $('#fb5-about').css('top',padding_top+'px');
+//         $('#fb5-about').css('top',padding_top+'px');
+         $('#fb5-about').css('top',0);
          //height
          var height=(this.heightBook()-( padding_top*2) )/zoom;
          $('#fb5-about').css('height',height+'px');
