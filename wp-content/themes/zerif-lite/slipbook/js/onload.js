@@ -1060,10 +1060,7 @@ var Book_v5 = {
            }
                      
         }
-        
-        
-         
-         $("#fb5").css('height',height);
+         $("#fb5").css('height',$(window).height()+"px");
 		
 	},
     
@@ -1088,6 +1085,7 @@ var Book_v5 = {
         
         var x=$('#fb5').width()/2-half_width;
         var y=$('#fb5').height()/2-half_height;
+         y= 10;
 		$('#fb5-container-book').css({ left: x, top:y });
 		
 		/*footer position/*/

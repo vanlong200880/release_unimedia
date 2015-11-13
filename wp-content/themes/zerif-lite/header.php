@@ -25,6 +25,22 @@ global $language;
 <link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/animate.css" rel="stylesheet">
 <link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/animate-customize.css" rel="stylesheet">
 <?php endif; ?>
+
+<?php
+$category = get_the_category($post->ID);
+$taxonomy = get_term($category[0]->category_parent, 'category');
+if(is_single() == true && $taxonomy->slug ==='magazine'){ ?>
+<link type="text/css" href="<?php echo get_template_directory_uri() ?>/slipbook/css/style.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700">
+<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/turn.js"></script>              
+<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.fullscreen.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.address-1.6.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/wait.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/onload.js"></script>
+<?php     
+}
+?>
 </head>
 
 <body <?php body_class($language); ?>>

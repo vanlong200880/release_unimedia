@@ -132,6 +132,7 @@ get_header(); ?>
         $listGalery = getGaleryFromPost($post);
         if($listGalery[0]){ ?>
 
+<?php if(wpmd_is_notphone() == true): ?>
 <!doctype html>
 <html>
 <head>
@@ -141,7 +142,7 @@ get_header(); ?>
     <meta content="width=device-width,initial-scale=1" name="viewport">
        
     <!-- title -->
-    <title>Diamond FlipBook in jQuery ( responsive )</title>        
+    <title><?php the_title() ?></title>        
         
     <!-- add css and js for flipbook -->
     <link type="text/css" href="<?php echo get_template_directory_uri() ?>/slipbook/css/style.css" rel="stylesheet">
@@ -172,8 +173,9 @@ get_header(); ?>
  
 <!-- DIV YOUR WEBSITE --> 
 <div style="width:100%;margin:0 auto">
-    
- 
+  <?php else: ?> 
+    <?php get_header(); ?>
+ <?php endif; ?>
 <!-- BEGIN FLIPBOOK STRUCTURE -->  
 <div id="fb5-ajax">	
          
@@ -208,7 +210,7 @@ get_header(); ?>
                     <?php 
                         foreach ($listGalery[0]['ids'] as $k => $galery) {
                             if($k === 0){
-                                the_post_thumbnail(array(550, 778), array('id'    => 'id_'.$galery, 'alt' => trim(strip_tags(get_post_meta($galery, '_wp_attachment_image_alt', true))),));
+                                the_post_thumbnail(array(480, 635), array('id'    => 'id_'.$galery, 'alt' => trim(strip_tags(get_post_meta($galery, '_wp_attachment_image_alt', true))),));
                             }
                             
                             ?>
@@ -252,8 +254,8 @@ get_header(); ?>
         
             <div class="fb5-bcg-tools"></div>
              
-            <a id="fb5-logo" target="_blank" href="http://codecanyon.net/user/flashmaniac?ref=flashmaniac">
-                <img alt="" src="<?php echo get_template_directory_uri() ?>/slipbook/images/logo.png">
+            <a id="fb5-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" width="100" alt="<?php echo get_bloginfo('title'); ?>">
             </a>
             
             <div class="fb5-menu" id="fb5-center">
@@ -331,7 +333,7 @@ get_header(); ?>
                             if($k > 0){ ?>
                     
                             <li class="<?php echo $k; ?>">
-                                <img alt="" data-src="<?php echo wp_get_attachment_url($galery, array(175,228)); ?>">
+                                <img alt="" data-src="<?php echo wp_get_attachment_url($galery, array(120,170)); ?>">
                             </li>
                             <?php } } ?>
                   </ul>
@@ -352,8 +354,8 @@ get_header(); ?>
     <script>    
     jQuery('#fb5').data('config',
     {
-    "page_width":"550",
-    "page_height":"778",
+    "page_width":"450",
+    "page_height":"635",
 	"email_form":"vanlong200880@gmail.com",
     "zoom_double_click":"1",
     "zoom_step":"0.06",
@@ -363,9 +365,9 @@ get_header(); ?>
     "gotopage_width":"30",
     "deeplinking_enabled":"true",
     "rtl":"false",
-    'full_area':'false',
-	'lazy_loading_thumbs':'false',
-	'lazy_loading_pages':'false'
+    'full_area':'true',
+	'lazy_loading_thumbs':'true',
+	'lazy_loading_pages':'true'
     })
     </script>
 
@@ -380,10 +382,12 @@ get_header(); ?>
 
        
 
-
+<?php if(wpmd_is_notphone() == true): ?>
 </body>
 </html>
-
+<?php else: ?>
+    <?php get_footer(); ?>
+<?php endif; ?>
 <?php }							
    endwhile;?>
 
