@@ -112,6 +112,35 @@ function zerif_setup() {
 add_action('after_setup_theme', 'zerif_setup');
 
 
+function getGaleryFromPost($post, $groupGallery = null) {
+    $content = get_the_content($post->ID); 
+    $pattern = get_shortcode_regex();
+    preg_match_all("/$pattern/s", $content, $match);
+    $attachments = array();
+    if(isset($match[2]) && $match[3]){
+        foreach ($match[2] as $key => $m2) {
+            if($m2 == "gallery"){
+                $atts = shortcode_parse_atts($match[3][$key]);
+				$att_group = !empty($atts['group']) ? $atts['group'] : '';
+				$existGallery = is_array($atts) && count($atts) > 0 && (empty($groupGallery) || $att_group == $groupGallery);
+				if ($existGallery) {
+					$gallery = array();
+					foreach ($atts as $katt => $vatt) {
+						if ('ids' == $katt) {
+							$gallery['ids'] = isset($atts['ids']) ? explode(',', $atts['ids']) : get_children('post_type=attachment&post_mime_type=image&post_parent=' . $objpost->ID . '&order=ASC&orderby=menu_order ID');
+						} else {
+							$gallery[$katt] = $vatt;
+						}
+					}
+					$attachments[] = $gallery;
+				}
+            }
+        }
+    }
+    return count($attachments)?$attachments:false;
+}
+
+
 /* custom form search */
 function uni_search_form( $form ) {
     global $language;

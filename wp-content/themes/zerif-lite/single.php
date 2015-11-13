@@ -127,85 +127,264 @@ get_header(); ?>
 
 <?php get_footer(); ?>
 <?php    else: ?>
-<!DOCTYPE html>
-<?php echo get_template_directory_uri(); ?>
-<html lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-		<title>UNIMEDIA</title>
-
-		<meta name="viewport" content="width = 1050, user-scalable = no" />
-		<script src="<?php echo get_template_directory_uri() ?>/js/jquery.js"></script>
-		<!-- <script type="text/javascript" src="extras/jquery.min.1.7.js"></script> -->
-		<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/extras/modernizr.2.5.3.min.js"></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/lib/hash.js"></script>
-	</head>
-	<body>
-
-		<div id="canvas">
-			<div class="zoom-icon zoom-icon-in"></div>
-			<div class="magazine-viewport">
-				<div class="container">
-					<div class="magazine">
-						<!-- Next button -->
-						<div ignore="1" class="next-button"></div>
-						<!-- Previous button -->
-						<div ignore="1" class="previous-button"></div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Thumbnails -->
-			<div class="thumbnails">
-				<div>
-					<ul>
-						<li class="i">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/1-thumb.jpg" width="76" height="100" class="page-1">
-							<span>1</span>
-						</li>
-						<li class="d">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/2-thumb.jpg" width="76" height="100" class="page-2">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/3-thumb.jpg" width="76" height="100" class="page-3">
-							<span>2-3</span>
-						</li>
-						<li class="d">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/4-thumb.jpg" width="76" height="100" class="page-4">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/5-thumb.jpg" width="76" height="100" class="page-5">
-							<span>4-5</span>
-						</li>
-						<li class="d">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/6-thumb.jpg" width="76" height="100" class="page-6">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/7-thumb.jpg" width="76" height="100" class="page-7">
-							<span>6-7</span>
-						</li>
-						<li class="d">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/8-thumb.jpg" width="76" height="100" class="page-8">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/9-thumb.jpg" width="76" height="100" class="page-9">
-							<span>8-9</span>
-						</li>
-						<li class="d">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/10-thumb.jpg" width="76" height="100" class="page-10">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/11-thumb.jpg" width="76" height="100" class="page-11">
-							<span>10-11</span>
-						</li>
-						<li class="i">
-							<img src="<?php echo get_template_directory_uri() ?>/pages/12-thumb.jpg" width="76" height="100" class="page-12">
-							<span>12</span>
-						</li>
-					</ul>
-				</div>	
-			</div>
-		</div>
-
-		
-	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/magazine-inline.js"></script>
-
-	</body>
-</html>
 
 <?php while ( have_posts() ) : the_post(); 
-        get_template_part( 'content', 'single' );
-   endwhile; // end of the loop. ?>
+        $listGalery = getGaleryFromPost($post);
+        if($listGalery[0]){ ?>
+
+<!doctype html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+   
+    <!-- viewport -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+       
+    <!-- title -->
+    <title>Diamond FlipBook in jQuery ( responsive )</title>        
+        
+    <!-- add css and js for flipbook -->
+    <link type="text/css" href="<?php echo get_template_directory_uri() ?>/slipbook/css/style.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700">
+    <script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.js"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/slipbook/js/turn.js"></script>              
+	<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.fullscreen.js"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.address-1.6.min.js"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/slipbook/js/wait.js"></script>
+	<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/onload.js"></script>
+
+
+    <!-- style css  -->
+	<style>	
+	    html,body {
+          margin: 0;
+          padding: 0;
+		  overflow:auto !important;
+        }
+	</style>
+      
+	</head>
+ 
+<body>
+
+
+
+ 
+<!-- DIV YOUR WEBSITE --> 
+<div style="width:100%;margin:0 auto">
+    
+ 
+<!-- BEGIN FLIPBOOK STRUCTURE -->  
+<div id="fb5-ajax">	
+         
+         
+      <!-- BEGIN HTML BOOK -->      
+      <div data-current="magazine" class="fb5" id="fb5">      
+            
+  
+      
+                           
+            <!-- BACKGROUND FOR BOOK -->  
+            <div class="fb5-bcg-book"></div>                      
+          
+            <!-- BEGIN CONTAINER BOOK -->
+            <div id="fb5-container-book">
+     
+                <!-- BEGIN deep linking -->  
+                <section id="fb5-deeplinking">
+                     <ul>
+                        <?php 
+                            foreach ($listGalery[0]['ids'] as $k => $galery) { 
+                                if($k != 0){
+?>
+                          <li data-address="page<?php echo $k ?>" data-page="<?php echo $k; ?>"></li>
+                                <?php } } ?>
+                     </ul>
+                 </section>
+                <!-- END deep linking -->  
+                
+                <!-- BEGIN ABOUT -->
+                <section id="fb5-about">
+                    <?php 
+                        foreach ($listGalery[0]['ids'] as $k => $galery) {
+                            if($k === 0){
+                                the_post_thumbnail(array(550, 778), array('id'    => 'id_'.$galery, 'alt' => trim(strip_tags(get_post_meta($galery, '_wp_attachment_image_alt', true))),));
+                            }
+                            
+                            ?>
+                   <?php } ?>
+                </section>
+                <!-- END ABOUT -->
+                <!-- BEGIN BOOK -->
+                <div id="fb5-book">
+                <!-- BEGIN PAGE 1 -->
+                <?php 
+                        foreach ($listGalery[0]['ids'] as $k => $galery) {
+                            if($k > 0){ ?>
+                        <div data-background-image="<?php echo wp_get_attachment_url($galery); ?>" class="">
+                             <!-- container page book --> 
+                             <div class="fb5-cont-page-book">
+                                 <!-- description for page --> 
+                                 <div class="fb5-page-book"></div> 
+                                <!-- number page and title  -->                
+                                <div class="fb5-meta">
+                                        <span class="fb5-num"><?php echo $k; ?></span>
+                                 </div> 
+                             </div> <!-- end container page book --> 
+                        </div>
+                            <?php } } ?>
+                <!-- END PAGE 1 -->                          
+              </div>
+              <!-- END BOOK -->
+                           
+                
+              <!-- arrows -->
+              <a class="fb5-nav-arrow prev"></a>
+              <a class="fb5-nav-arrow next"></a>
+                
+                
+             </div>
+             <!-- END CONTAINER BOOK -->
+    
+    
+        <!-- BEGIN FOOTER -->
+        <div id="fb5-footer">
+        
+            <div class="fb5-bcg-tools"></div>
+             
+            <a id="fb5-logo" target="_blank" href="http://codecanyon.net/user/flashmaniac?ref=flashmaniac">
+                <img alt="" src="<?php echo get_template_directory_uri() ?>/slipbook/images/logo.png">
+            </a>
+            
+            <div class="fb5-menu" id="fb5-center">
+                <ul>                                        
+                    
+                    <!-- icon_zoom_in -->                              
+                    <li>
+                        <a title="ZOOM IN" class="fb5-zoom-in"></a>
+                    </li>                               
+                    
+                    <!-- icon_zoom_out -->
+                     
+                    <li>
+                        <a title="ZOOM OUT " class="fb5-zoom-out"></a>
+                    </li>                                
+                    
+                    <!-- icon_zoom_auto -->
+                    <li>
+                        <a title="ZOOM AUTO " class="fb5-zoom-auto"></a>
+                    </li>                                
+                    
+                    <!-- icon_zoom_original -->
+                    <li>
+                        <a title="ZOOM ORIGINAL (SCALE 1:1)" class="fb5-zoom-original"></a>
+                    </li>
+                                     
+                    
+                    <!-- icon_allpages -->
+                    <li>
+                        <a title="SHOW ALL PAGES " class="fb5-show-all"></a>
+                    </li>
+                                                    
+                    
+                    <!-- icon_home -->
+                    <li>
+                        <a title="SHOW HOME PAGE " class="fb5-home"></a>
+                    </li>
+                                    
+                </ul>
+            </div>
+            
+            <div class="fb5-menu" id="fb5-right">
+                <ul> 
+                    <!-- icon page manager -->                 
+                    <li class="fb5-goto">
+                        <label for="fb5-page-number" id="fb5-label-page-number">PAGE</label>
+                        <input type="text" id="fb5-page-number">
+                        <button type="button">GO</button>
+                    </li>    
+                            
+                    <!-- icon fullscreen -->                 
+                    <li>
+                        <a title="FULL / NORMAL SCREEN" class="fb5-fullscreen"></a>
+                    </li>                                       
+                                    
+                </ul>
+            </div>
+            
+            
+        
+        </div>
+        <!-- END FOOTER -->
+    
+    
+        <!-- BEGIN ALL PAGES -->
+          <div id="fb5-all-pages" class="fb5-overlay">
+    
+          <section class="fb5-container-pages">
+    
+            <div id="fb5-menu-holder">
+    
+                <ul id="fb5-slider">
+                        <?php 
+                        foreach ($listGalery[0]['ids'] as $k => $galery) {
+                            if($k > 0){ ?>
+                    
+                            <li class="<?php echo $k; ?>">
+                                <img alt="" data-src="<?php echo wp_get_attachment_url($galery, array(175,228)); ?>">
+                            </li>
+                            <?php } } ?>
+                  </ul>
+            
+              </div>
+    
+          </section>
+    
+         </div>
+         <!-- END ALL PAGES -->
+
+
+   </div>
+   <!-- END HTML BOOK -->
+
+
+    <!-- CONFIGURATION FLIPBOOK -->
+    <script>    
+    jQuery('#fb5').data('config',
+    {
+    "page_width":"550",
+    "page_height":"778",
+	"email_form":"vanlong200880@gmail.com",
+    "zoom_double_click":"1",
+    "zoom_step":"0.06",
+    "double_click_enabled":"true",
+    "tooltip_visible":"true",
+    "toolbar_visible":"true",
+    "gotopage_width":"30",
+    "deeplinking_enabled":"true",
+    "rtl":"false",
+    'full_area':'false',
+	'lazy_loading_thumbs':'false',
+	'lazy_loading_pages':'false'
+    })
+    </script>
+
+
+</div>
+<!-- END FLIPBOOK STRUCTURE -->    
+
+
+
+</div> 
+<!-- END DIV YOUR WEBSITE --> 
+
+       
+
+
+</body>
+</html>
+
+<?php }							
+   endwhile;?>
+
 <?php endif; ?>
