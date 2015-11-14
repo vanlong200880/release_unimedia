@@ -99,6 +99,17 @@
             $("#support").on('click', function(){
                 $("div.support").toggleClass("active");
             });
+            var scroll = 0;
+            if($('#four-seasons').hasClass('fix-top')){
+                scroll = $(".fix-top").offset().top;
+            }else{
+                if($('#wrapp-details').hasClass('fix-top')){
+                    scroll = $(".fix-top").offset().top;
+                }
+            }
+            $('body,html').animate({
+                scrollTop:scroll
+            },2000);
             
           $("#owl-product-carousel").owlCarousel({
                 items : 5,

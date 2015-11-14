@@ -23,16 +23,16 @@ get_header(); ?>
 </section><!--end wrap-new-adv-->
 
 
-<!--<section id="wrap-magazine">
+<section id="wrap-magazine">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                    <?php //get_template_part('template-small/magazine'); ?>
-                end show-magazine
+                    <?php get_template_part('template-small/magazine'); ?>
             </div>
         </div>
     </div>
-</section>end wrap-magazine-->
+</section>
+
 <?php if(is_category('magazine')){
     //get_template_part('template-small/magazine_related');
 } ?>
@@ -105,7 +105,7 @@ $parent = get_category($category[0]->category_parent);
 
 <?php else: ?>
  <?php if ( have_posts() ) : ?>
-	<section id="four-seasons" class="article-all">
+	<section id="four-seasons" class="article-all fix-top">
 		<div class="container">
 			<div class="row">
 				<div class="wrapp-categories">
