@@ -28,6 +28,7 @@ global $language;
 
 <?php
 $category = get_the_category($post->ID);
+if(!empty($category)):
 $taxonomy = get_term($category[0]->category_parent, 'category');
 if(is_single() == true && $taxonomy->slug ==='magazine'){ ?>
 <link type="text/css" href="<?php echo get_template_directory_uri() ?>/slipbook/css/style.css" rel="stylesheet">
@@ -40,6 +41,7 @@ if(is_single() == true && $taxonomy->slug ==='magazine'){ ?>
 <script src="<?php echo get_template_directory_uri() ?>/slipbook/js/onload.js"></script>
 <?php     
 }
+endif;
 ?>
 </head>
 

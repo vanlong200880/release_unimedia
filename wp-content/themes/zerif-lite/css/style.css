@@ -464,3 +464,36 @@
 #wrapp-details .page-header h2{
   margin-bottom: 0;
 }
+
+/* support */
+.support{
+    width: 200px;
+    height: 300px;
+    background: #000;
+    position:  fixed;
+    right: -200px;
+    top: 25%;
+    -webkit-transition: right 0.2s;
+    transition: right 0.2s;
+    -moz-transition: right 0.2s;
+}
+.support.active{
+    right: 0;
+    -webkit-transition: right 0.2s;
+    transition: right 0.2s;
+    -moz-transition: right 0.2s;
+        
+}
+#support{
+    width: 69px;
+    height: 69px;
+    background: url('../images/chat.png') no-repeat;
+    position:  fixed;
+    color: #FFF;
+    padding-top: 10px;
+    font-size: 13px;
+    text-align: center;
+    right: 0;
+    bottom: 30px;
+    cursor: pointer;
+}

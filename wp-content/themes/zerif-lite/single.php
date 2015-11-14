@@ -388,6 +388,16 @@ get_header(); ?>
 <?php else: ?>
     <?php get_footer(); ?>
 <?php endif; ?>
+<?php }else{ ?>
+    <?php get_header(); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1><?php echo ($language == 'vi')? 'Không có dữ liệu.':'Data empty'; ?></h1>
+        </div>
+    </div>
+</div>
+    <?php get_footer(); ?>
 <?php }							
    endwhile;?>
 

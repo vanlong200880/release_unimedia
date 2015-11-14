@@ -84,6 +84,10 @@
         </div>
     </footer>
 </div>
+<a id="support"><?php echo ($language == 'vi')? 'Tư vấn <br> online': 'Support <br> online'; ?></a>
+<div class="support">
+    
+</div>
 
 <?php wp_footer(); ?>
 <?php if(is_front_page()): ?>
@@ -92,6 +96,10 @@
 <?php endif; ?>
 <script type="text/javascript">
         $(document).ready(function() {
+            $("#support").on('click', function(){
+                $("div.support").toggleClass("active");
+            });
+            
           $("#owl-product-carousel").owlCarousel({
                 items : 5,
                 itemsDesktop: [1400, 5],
