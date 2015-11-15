@@ -91,8 +91,8 @@
 
 <?php wp_footer(); ?>
 <?php if(is_front_page()): ?>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.appear.js"></script>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/custom.js"></script>
+<!--<script src="<?php //echo esc_url( get_template_directory_uri() ); ?>/js/jquery.appear.js"></script>-->
+<!--<script src="<?php //echo esc_url( get_template_directory_uri() ); ?>/js/custom.js"></script>-->
 <?php endif; ?>
 <script type="text/javascript">
         $(document).ready(function() {
@@ -100,14 +100,14 @@
                 $("div.support").toggleClass("active");
             });
             
-            if($('#four-seasons').hasClass('fix-top')){
-                $('html, body').animate({scrollTop:$('.fix-top').position().top}, 'slow');  
-            }else{
-                if($('#wrapp-details').hasClass('fix-top')){
-                    $('html, body').animate({scrollTop:$('.fix-top').position().top}, 'slow');  
-                }
-            }
-
+//            if($('#four-seasons').hasClass('fix-top')){
+//                $('html, body').animate({scrollTop:$('.fix-top').position().top - 10}, 'slow');  
+//            }else{
+//                if($('#wrapp-details').hasClass('fix-top')){
+//                    $('html, body').animate({scrollTop:$('.fix-top').position().top - 10}, 100);  
+//                }
+//            }
+           
           $("#owl-product-carousel").owlCarousel({
                 items : 5,
                 itemsDesktop: [1400, 5],
@@ -162,18 +162,21 @@
                 stopOnHover : true
           });
         });
-		jQuery(document).ready(function($) {
-			$num = 0;
-			$('footer .row .border-right-footer').each(function(index, el) {
-				$height = $(this).innerHeight();
-				if($height > $num){
-				$num = $height;
-			}
-			});
-			$('footer .row .border-right-footer').css('height', $num);
-		});
         
+        <?php if(wpmd_is_phone()): ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $num = 0;
+                $('footer .row .border-right-footer').each(function(index, el) {
+                    $height = $(this).innerHeight();
+                    if($height > $num){
+                    $num = $height;
+                }
+                });
+                $('footer .row .border-right-footer').css('height', $num);
+            });
         </script>
+        <?php endif; ?>
 </body>
 
 </html>

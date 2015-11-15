@@ -52,7 +52,7 @@ $parent = get_category($category[0]->category_parent);
             <div class="row">
                 <div class="col-md-12">            
                     <div class="title magazine">
-                        <h2><?php echo $parent->name; ?></h2>
+                        <h2><?php echo $parent->name; ?> / <?php echo $category[0]->name; ?></h2>
                         <div class="line">
                             <span class="icon-dotted-01"></span>
                         </div>

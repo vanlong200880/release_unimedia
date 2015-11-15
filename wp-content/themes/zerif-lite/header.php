@@ -22,8 +22,8 @@ global $language;
 
 <?php wp_head(); ?>
 <?php if(is_front_page()): ?>
-<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/animate.css" rel="stylesheet">
-<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/animate-customize.css" rel="stylesheet">
+<!--<link href="<?php //echo esc_url( get_template_directory_uri() ); ?>/css/animate.css" rel="stylesheet">-->
+<!--<link href="<?php //echo esc_url( get_template_directory_uri() ); ?>/css/animate-customize.css" rel="stylesheet">-->
 <?php endif; ?>
 
 <?php
