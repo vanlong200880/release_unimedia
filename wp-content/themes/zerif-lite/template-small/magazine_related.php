@@ -39,7 +39,7 @@
                             $category = $categories_related[$i];
                             $custom_field = get_field('featured_image', $category );
                             ?>
-                        <li class="col-md-3">
+                        <li>
                             <figure>
                                 <a href="<?php echo get_category_link( $category->term_id ); ?>"><img src="<?php echo $custom_field['sizes']['zerif_magazine_category_thumbnail']; ?>" alt=""></a>
                                 <figcaption>
