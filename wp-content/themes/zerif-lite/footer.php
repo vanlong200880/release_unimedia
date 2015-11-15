@@ -162,7 +162,7 @@
                 stopOnHover : true
           });
         });
-        
+    </script>
         <?php if(wpmd_is_phone()): ?>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
