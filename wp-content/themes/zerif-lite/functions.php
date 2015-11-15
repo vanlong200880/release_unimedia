@@ -34,7 +34,7 @@ function zerif_setup() {
     add_image_size( 'post-thumbnail-large-mobile', 400, 200, true ); /* blog thumbnail for mobile */
 	add_image_size('zerif_project_photo', 285, 214, true);
     add_image_size('zerif_our_team_photo', 174, 174, true);
-    add_image_size('zerif_magazine_category_thumbnail', 421, 595, true);
+    add_image_size('zerif_magazine_category_thumbnail', 480, 679, true);
 
 	/* Register primary menu */
     register_nav_menus(array(
