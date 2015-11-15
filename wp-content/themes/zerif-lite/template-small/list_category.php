@@ -35,7 +35,7 @@ $heath_care_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(570, 380));
+                                the_post_thumbnail(array(767, 511));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -71,7 +71,7 @@ $heath_care_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(570, 380));
+                                the_post_thumbnail(array(767, 511));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -134,7 +134,7 @@ $taste_event_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(570, 380));
+                                the_post_thumbnail(array(767, 511));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -170,7 +170,7 @@ $taste_event_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(570, 380));
+                                the_post_thumbnail(array(767, 511));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -234,7 +234,7 @@ $real_estate_source_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(570, 380));
+                                the_post_thumbnail(array(767, 511));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -308,7 +308,7 @@ $travel_education_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(570, 380));
+                                the_post_thumbnail(array(767, 511));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -382,7 +382,7 @@ $seasion_promotion_args = array (
                          <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(570, 380));
+                                the_post_thumbnail(array(767, 511));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
