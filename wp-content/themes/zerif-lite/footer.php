@@ -163,7 +163,7 @@
           });
         });
     </script>
-        <?php if(wpmd_is_phone()): ?>
+        <?php if(!wpmd_is_phone()): ?>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $num = 0;

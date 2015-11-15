@@ -10,7 +10,7 @@ global $language;
 <section id="wrap-magazine" class="wrap-magazine-related">
     <div class="container">
         <div class="row">
-            <div class="col-md-12"><h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'zerif-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h1></div>  
+            <div class="col-md-12"><h3 class="page-title"><?php printf( __( 'Search Results for: %s', 'zerif-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h3></div>  
 <?php 
 
 // search magazine

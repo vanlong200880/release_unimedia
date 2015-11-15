@@ -27,7 +27,9 @@ global $language;
 <?php endif; ?>
 
 <?php
+if(!is_search()){
 $category = get_the_category($post->ID);
+var_dump($category);
 if(!empty($category)):
     if(!empty($category[0]->category_parent )){
 $taxonomy = get_term($category[0]->category_parent, 'category');
@@ -43,6 +45,7 @@ if(is_single() == true && $taxonomy->slug ==='magazine'){ ?>
 <?php     
 }     }
 endif;
+}
 ?>
 </head>
 
