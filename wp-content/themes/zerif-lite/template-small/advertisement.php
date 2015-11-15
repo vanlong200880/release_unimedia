@@ -160,7 +160,7 @@
                 <?php
                     $attachment_id = get_post_thumbnail_id(get_the_ID());
                     if (!empty($attachment_id)) { 
-                        the_post_thumbnail(array(570, 380));
+                        the_post_thumbnail(array(767, 511));
                         ?>
                     <?php }else{
                         echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
