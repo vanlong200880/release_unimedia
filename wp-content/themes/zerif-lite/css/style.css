@@ -91,6 +91,9 @@
   border-radius: 0;
   box-shadow: none;
 }
+#header .navigation nav.navbar-default .navbar-form .form-group select{
+  max-width: 100px;
+}
 #header .navigation nav.navbar-default .navbar-form button.btn.btn-default {
   background-color: #2A255C;
   border-radius: 0;
@@ -228,8 +231,11 @@
   float: left;
   width: 218px;
   height: 308px;
-  margin-right: 12px;
+  margin-right: 13px;
 }
+#wrap-magazine .show-magazine ul div.owl-item{
+    margin-right: 2px;
+  }
 #wrap-magazine.wrap-magazine-related .show-magazine ul li{
   width: 275px;
   height: 389px;
@@ -409,6 +415,9 @@
 #footer .wrap-chat i.fa.fa-mobile{
   font-size: 40px;
 }
+#footer .info-company p.logo-footer.hiden{
+    display: block;
+  }
 
 /*--customize owl css--*/
 #wrap-magazine .show-magazine .owl-theme .owl-controls .owl-buttons div{
@@ -467,15 +476,41 @@
 
 /* support */
 .support{
-    width: 200px;
-    height: 300px;
-    background: #000;
+    width: auto;
+    height: auto;
+    padding:10px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background: #292663;
     position:  fixed;
     right: -200px;
     top: 25%;
+    color: #fff;
     -webkit-transition: right 0.2s;
     transition: right 0.2s;
     -moz-transition: right 0.2s;
+}
+.support div.group-support{
+  margin-bottom: 10px;
+}
+.support div.group-support:last-child{
+  margin-bottom: 0px;
+}
+.support div.group-support p.title-support{
+  color: #fff000;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.support div.group-support span i.fa{
+  margin-right: 3px;
+}
+.support div.group-support a{
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+}
+.support div.group-support a:hover{
+  text-decoration: underline;
 }
 .support.active{
     right: 0;

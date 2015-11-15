@@ -13,7 +13,7 @@ $heath_care_args = array (
     if($heath_care_the_query->have_posts()){ 
         $idObj = get_category_by_slug($heath_care); 
 ?>
-<section id="health-taste" class="article-all animate-bounce-up" >
+<section id="health-taste" class="article-all animate-bounce-up health-taste" >
     <div class="container subject">
         <div class="row">
 <div class="col-md-6 col-sm-6 col-xs-12">          
@@ -65,13 +65,13 @@ $heath_care_args = array (
                 </figure>
             </div>
         <?php else: ?>
-            <div class="show-article-thumb col-md-4 col-sm-4 col-xs-12">
+            <div class="show-article-thumb col-md-4 col-sm-4 col-xs-4">
                 <figure>
                     <a href="<?php the_permalink() ?>">
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(767, 511));
+                                the_post_thumbnail(array(480, 320));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -164,13 +164,13 @@ $taste_event_args = array (
                 </figure>
             </div>
         <?php else: ?>
-            <div class="show-article-thumb col-md-4 col-sm-4 col-xs-12">
+            <div class="show-article-thumb col-md-4 col-sm-4 col-xs-4">
                 <figure>
                     <a href="<?php the_permalink() ?>">
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(767, 511));
+                                the_post_thumbnail(array(480, 320));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -228,13 +228,13 @@ $real_estate_source_args = array (
         while ($real_estate_source_the_query->have_posts()){
             $real_estate_source_the_query->the_post(); 
             ?>
-            <div class="col-md-3 col-sm-3 col-xs-12 show-article">
+            <div class="col-md-3 col-sm-3 col-xs-6 show-article">
                 <figure>
                     <a href="<?php the_permalink() ?>">
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(767, 511));
+                                the_post_thumbnail(array(480, 320));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -302,13 +302,13 @@ $travel_education_args = array (
         while ($travel_education_the_query->have_posts()){
             $travel_education_the_query->the_post(); 
             ?>
-            <div class="col-md-3 col-sm-3 col-xs-12 show-article">
+            <div class="col-md-3 col-sm-3 col-xs-6 show-article">
                 <figure>
                     <a href="<?php the_permalink() ?>">
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(767, 511));
+                                the_post_thumbnail(array(480, 320));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -360,7 +360,7 @@ $seasion_promotion_args = array (
     if($seasion_promotion_the_query->have_posts()){ 
         $idObj = get_category_by_slug( $seasion_promotion ); 
 ?>
-<section id="real-estate" class="article-all animate-bounce-up">
+<section id="real-estate" class="article-all animate-bounce-up ">
     <div class="container subject">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -376,13 +376,13 @@ $seasion_promotion_args = array (
         while ($seasion_promotion_the_query->have_posts()){
             $seasion_promotion_the_query->the_post(); 
             ?>
-            <div class="col-md-3 col-sm-3 col-xs-12 show-article">
+            <div class="col-md-3 col-sm-3 col-xs-6 show-article">
                 <figure>
                     <a href="<?php the_permalink() ?>">
                          <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(767, 511));
+                                the_post_thumbnail(array(480, 320));
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';

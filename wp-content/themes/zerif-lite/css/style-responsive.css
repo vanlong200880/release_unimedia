@@ -118,11 +118,17 @@
 	.article-all .top-sub-featured figure figcaption div.readmore a{
 		font-size: 10px;
 	}
+	#wrap-new-adv .big-new-adv{
+		height: 230px;
+	}
+	#wrap-new-adv .big-new-adv .owl-theme .owl-controls{
+		bottom: 40px;
+	}
 }		
 
 @media (max-width:767px){
 	h2{
-		font-size: 22px;
+		font-size: 20px;
 		font-weight: bold;
 	}
 	/*--show and hide--*/
@@ -370,11 +376,25 @@
 		margin-bottom: 10px;
 	}
 	/*--slide margazine--*/
+	#wrap-magazine.wrap-magazine-related .show-magazine ul li,
 	#wrap-magazine .show-magazine ul li{
 		width: 100%;
 		height: 100%;
 	}
+	#wrap-magazine.wrap-magazine-related .show-magazine ul li{
+		margin-bottom: 15px;
+		margin-right: 0;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine ul li:last-child{
+		margin-bottom: 0;
+	}
+	#wrap-magazine .show-magazine ul div.owl-item{
+		margin-right: 0px;
+	}
 	/*--footer--*/
+	#footer{
+		padding: 15px 0;
+	}
 	#footer .border-right-footer{
 		border-right:none;
 		border-bottom: 1px solid #727272;
@@ -398,6 +418,9 @@
 	#footer .wrap-about{
 		margin-top: 20px;
 	}
+	#footer .info-company p.logo-footer.hiden{
+		display: none;
+	}
 	/*--categories details--*/
 	#wrapp-details .show-details .content-details img{
 	  padding: 0;
@@ -409,14 +432,24 @@
         display: none;
     }
 }
-@media (min-width:640px) and (max-width: 767px){
+@media (min-width:481px) and (max-width: 767px){
 	h2{
 		font-size: 30px;
 	}
-	#wrap-magazine .show-magazine ul li {
-	    width: 97%;
-	    height: 97%;
+	#wrap-magazine .show-magazine ul div.owl-item{
+		margin-right: 0%;
 	}
+	#wrap-magazine .show-magazine ul li {
+	    width: 96%;
+	    height: 96%;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine ul li{
+		width: 49%;
+		margin-right: 2%;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine ul li:nth-child(2n+2){
+		margin-right: 0%;
+	}  
 	#wrap-new-adv .big-new-adv .show-adv figure figcaption{
 		font-size: 16px;
 	}
@@ -435,4 +468,15 @@
 		font-size: 14px;
 	}
 
+}
+@media (max-width: 480px){
+	#health-taste.article-all.health-taste .show-article  div.show-article-thumb.col-xs-4{
+		width: 100%
+	}
+	.article-all .show-article figure figcaption a{
+		font-size: 14px;
+	}
+	.article-all .show-article figure figcaption p{
+		font-size: 12px;
+	}
 }

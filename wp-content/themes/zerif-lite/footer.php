@@ -20,7 +20,7 @@
                         <p><?php echo ($language == 'vi') ? '217 Nam Kỳ Khởi Nghĩa, P.7, Q.3': '217 Nam Ky Khoi Nghia Street, Ward 7, District 3' ?></p>
                         <p>Tel:(08) 3932 9777</p>
                         <p>Fax: (08) 3932 9333</p>
-                        <p class="logo-footer">
+                        <p class="logo-footer hiden">
                             <?php
                                 echo '<a href="'.esc_url( home_url( '/' ) ).'">';
                                     echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'" title="'.get_bloginfo('title').'">';
@@ -32,7 +32,7 @@
                     </div><!--end info-company-->
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12 border-right-footer">
+                <div class="col-md-4 col-sm-4 col-xs-12 hidden-xs border-right-footer">
                     <div class="wrap-about">
                         <h1><?php echo ($language == 'vi')? 'Giới thiệu': 'about us'; ?></h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, </p>
@@ -86,6 +86,34 @@
 </div>
 <a id="support"><?php echo ($language == 'vi')? 'Tư vấn <br> online': 'Support <br> online'; ?></a>
 <div class="support">
+    <div class="group-support">
+        <p class="title-support">Sales Bất Động Sản</p>
+        <span><i class="fa fa-skype"></i></span> 
+        <a href="">Skype chat 1</a>     
+    </div>
+    <div class="group-support">
+        <p class="title-support">Sales Tạp Chí</p>
+        <p>
+            <span><i class="fa fa-skype"></i></span> 
+            <a href="">Skype chat 1</a>     
+        </p>
+        <p>
+            <span><i class="fa fa-skype"></i></span> 
+            <a href="">Skype chat 2</a>     
+        </p>
+        <p>
+            <span><i class="fa fa-skype"></i></span> 
+            <a href="">Skype chat 3</a>     
+        </p>
+        <p>
+            <span><i class="fa fa-skype"></i></span> 
+            <a href="">Skype chat 4</a>     
+        </p>
+        <p>
+            <span><i class="fa fa-skype"></i></span> 
+            <a href="">Skype chat 5</a>     
+        </p>
+    </div>
     
 </div>
 
@@ -113,7 +141,7 @@
                 itemsDesktop: [1400, 5],
                 itemsDesktopSmall: [1100, 5],
                 itemsTablet: [767, 2],
-                itemsMobile: [500, 1],
+                itemsMobile: [480, 1],
                 autoPlay: 3000,
                 navigation : true,
                 slideSpeed : 300,
@@ -131,8 +159,8 @@
                 itemsDesktop: [1400, 5],
                 itemsDesktopSmall: [1100, 5],
                 itemsTablet: [767, 2],
-                itemsMobile: [500, 1],
-                autoPlay: 4000,
+                itemsMobile: [480, 1],
+                autoPlay: false,
                 navigation : true,
                 slideSpeed : 300,
                 paginationSpeed : 400,
