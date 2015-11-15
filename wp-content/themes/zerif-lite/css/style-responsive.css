@@ -71,7 +71,8 @@
 	    margin: 15px 0;
 	}
 	#header .navigation nav.navbar-default .navbar-nav>li>a{
-		font-size: 13px;
+		font-size: 12px;
+		padding:15px 8px;
 	}
 	#wrap-magazine .show-magazine ul li{
 		/*width: 140px;
@@ -118,14 +119,13 @@
 	.article-all .top-sub-featured figure figcaption div.readmore a{
 		font-size: 10px;
 	}
-	#wrap-new-adv .big-new-adv{
+	/*#wrap-new-adv .big-new-adv{
 		height: 230px;
-	}
+	}*/
 	#wrap-new-adv .big-new-adv .owl-theme .owl-controls{
 		bottom: 40px;
 	}
-}		
-
+}
 @media (max-width:767px){
 	h2{
 		font-size: 20px;
@@ -431,6 +431,9 @@
     .zopim{
         display: none;
     }
+    .article-all .show-article figure figcaption div.readmore a{
+		font-size: 10px;
+	}
 }
 @media (min-width:481px) and (max-width: 767px){
 	h2{
@@ -478,5 +481,16 @@
 	}
 	.article-all .show-article figure figcaption p{
 		font-size: 12px;
+	}
+
+}
+@media (max-width: 480px) and (orientation: landscape){
+	#wrap-magazine .title.magazine div.line span, 
+	#health-taste .title.health div.line span, 
+	#health-taste .title.taste div.line span, 
+	#real-estate .title.real div.line span, 
+	#travel-edu .title.travel div.line span, 
+	#four-seasons .title.seasions div.line span{
+		left: 43%;
 	}
 }
