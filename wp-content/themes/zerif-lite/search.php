@@ -10,7 +10,6 @@ global $language;
 <section id="wrap-magazine" class="wrap-magazine-related">
     <div class="container">
         <div class="row">
-            <div class="col-md-12"><h3 class="page-title"><?php printf( __( 'Search Results for: %s', 'zerif-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h3></div>  
 <?php 
 
 // search magazine
@@ -57,7 +56,7 @@ if(!empty($keyword)):
                             $the_query->the_post(); ?>
                             <li class="col-md-3">
                                 <figure>
-                                    <a href="<?php the_permalink() ?>">
+                                    <a target="_blank" href="<?php the_permalink() ?>">
                                         <?php
                                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                                             if (!empty($attachment_id)) { 
@@ -69,7 +68,7 @@ if(!empty($keyword)):
                                         ?>
                                     </a>
                                     <figcaption>
-                                        <p><a href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
+                                        <p><a target="_blank" href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
                                     </figcaption>
                                 </figure>
                             </li>

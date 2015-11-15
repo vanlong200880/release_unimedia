@@ -92,7 +92,7 @@
   box-shadow: none;
 }
 #header .navigation nav.navbar-default .navbar-form .form-group select{
-  max-width: 100px;
+  max-width: 125px;
 }
 #header .navigation nav.navbar-default .navbar-form button.btn.btn-default {
   background-color: #2A255C;
@@ -532,4 +532,11 @@
     bottom: 30px;
     cursor: pointer;
     z-index: 999;
+}
+.data-empty{
+    line-height: 150px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
 }

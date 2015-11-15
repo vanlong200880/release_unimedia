@@ -104,7 +104,7 @@ get_header(); ?>
 											<?php 
 												$str = get_post_custom_values('excerpt', get_the_ID());
 												$str = (empty($str))? get_the_excerpt() : $str[0];
-												echo filter_character($str, 16);
+												echo filter_character($str, 10);
 											?>
                                             
                                         </p>
@@ -197,7 +197,7 @@ get_header(); ?>
                      <ul>
                         <?php 
                             foreach ($listGalery[0]['ids'] as $k => $galery) { 
-                                if($k != 0){
+                                if($k > 0){
 ?>
                           <li data-address="page<?php echo $k ?>" data-page="<?php echo $k; ?>"></li>
                                 <?php } } ?>
@@ -393,7 +393,7 @@ get_header(); ?>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1><?php echo ($language == 'vi')? 'Không có dữ liệu.':'Data empty'; ?></h1>
+            <h1 class="data-empty"><?php echo ($language == 'vi')? 'Không có dữ liệu.':'Data empty'; ?></h1>
         </div>
     </div>
 </div>

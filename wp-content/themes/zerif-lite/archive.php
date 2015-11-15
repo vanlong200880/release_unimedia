@@ -63,7 +63,7 @@ $parent = get_category($category[0]->category_parent);
                             <?php while ( have_posts() ) : the_post(); ?>
                             <li>
                                 <figure>
-                                    <a href="<?php the_permalink() ?>" title="<?php echo get_the_title(); ?>">
+                                    <a href="<?php the_permalink() ?>" target="_blank" title="<?php echo get_the_title(); ?>">
                                          <?php
                                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                                             if (!empty($attachment_id)) { 
@@ -87,7 +87,7 @@ $parent = get_category($category[0]->category_parent);
                                         ?>
                                     </a>
                                     <figcaption>
-                                        <p><a href="<?php the_permalink()?>"><?php the_title() ?></a></p>
+                                        <p><a target="_blank" href="<?php the_permalink()?>"><?php the_title() ?></a></p>
                                     </figcaption>
                                 </figure>
                             </li>
