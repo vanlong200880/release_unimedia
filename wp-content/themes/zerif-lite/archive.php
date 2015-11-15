@@ -23,15 +23,15 @@ get_header(); ?>
 </section><!--end wrap-new-adv-->
 
 
-<section id="wrap-magazine">
+<!--<section id="wrap-magazine">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                    <?php get_template_part('template-small/magazine'); ?>
+                    <?php //get_template_part('template-small/magazine'); ?>
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 <?php if(is_category('magazine')){
     //get_template_part('template-small/magazine_related');
