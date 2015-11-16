@@ -138,12 +138,15 @@
 	#footer .wrap-about, #footer .info-social{
 		padding-left: 15px;
 	}
+	#footer .wrap-about h1{
+		font-size: 30px;
+	}
 	#support{
 		bottom: 12%;
 		right: 10px;
 	}
 	.navbar-form .form-control{
-		max-width: 160px;
+		max-width: 150px;
 	}
 }
 @media screen and (max-width: 1024px) and (orientation: landscape){
