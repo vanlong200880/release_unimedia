@@ -35,10 +35,19 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 hidden-xs border-right-footer">
                     <div class="wrap-about">
                         <h1><?php echo ($language == 'vi')? 'Giới thiệu': 'about us'; ?></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi tempora, laboriosam delectus architecto, atque id dolor natus eligendi a nostrum dolorum consequatur placeat, iusto nesciunt autem, at porro suscipit maiores.</p>
+						<?php if($language == 'vi'): ?>
+						<p>Để mang sản phẩm, thương hiệu đến gần hơn người tiêu dùng, các doanh nghiệp đã và đang thực hiện rất nhiều hình thức PR – Marketing với mức chi phí không nhỏ, nhưng đã trở nên bão hòa trong thời đại hiện nay. </p>
+                        <p><b>UNIMEDIA</b> tự hào cho ra mắt ấn phẩm mang phong cách hoàn toàn khác biệt với 100% quảng cáo – phát triển thành công hơn 15 năm tại thị trường Mỹ. Chúng tôi tin chắc UNIMEDIA sẽ là lựa chọn hàng đầu cho các doanh nghiệp để đưa sản phẩm, dịch vụ của mình đến tay người tiêu dùng một cách nhanh chóng và hiệu quả nhất.</p>
+						<?php else: ?>
+						
+						<p>For increasing the customers’awareness about products and brands, most companies have spent more and more expenses on means of PR – Marketing, which is getting into saturation nowsadays.</p>
+						<p>UNIMEDIA proudly issue advertising magazines in completely impressive version with 100% ads – used to succeed over 15 years in USA. We strongly believe that UNIMEDIA is the 
+best choice for all companies to bring products & services to millions of customer fast and effectively.</p>
+						<?php endif; ?>
+                        
+						
                         <p>
-                            <a href="" class="btn btn-primary">Read more <span class="arrow">&rsaquo;&rsaquo;</span></a>
+                            <a href="<?php echo ($language == 'vi')? esc_url( home_url( '/en/about-us' )): esc_url( home_url( '/vi/about-us' ) ); ?>" class="btn btn-primary"><?php echo ($language == 'vi')? ' Đọc thêm ': ' Read more '; ?><span class="arrow">&rsaquo;&rsaquo;</span></a>
                         </p>
                     </div>
                 </div>
