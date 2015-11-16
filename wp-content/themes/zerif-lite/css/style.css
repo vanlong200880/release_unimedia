@@ -476,6 +476,28 @@
 #wrapp-details .page-header h2{
   margin-bottom: 0;
 }
+#wrapp-details .show-details form.wpcf7-form input.wpcf7-text{
+  width: 500px;
+  height: 40px;
+}
+#wrapp-details .show-details form.wpcf7-form textarea.wpcf7-textarea{
+  width: 100%;
+}
+#wrapp-details .show-details form.wpcf7-form input.wpcf7-form-control.wpcf7-submit{
+  color: #fff;
+  background-color: #575756;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-transform: capitalize;
+  border: none;
+  margin-top: 10px;
+  padding: 6px 12px;
+}
+#wrapp-details .show-details form.wpcf7-form input.wpcf7-form-control.wpcf7-submit:hover{
+  background-color: #E30513;
+  color: #fff;
+}
+
 
 /* support */
 .support{
@@ -542,4 +564,8 @@
     border-radius: 5px;
     text-align: center;
     margin-bottom: 15px;
+}
+/*--not found--*/
+.not-found .page-header{
+  margin: 0px 0 20px;
 }

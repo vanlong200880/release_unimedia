@@ -54,7 +54,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-8">
+            <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="show-details">
                         <?php while ( have_posts() ) : the_post(); 
                             get_template_part( 'content', 'single' );
@@ -73,7 +73,7 @@ get_header(); ?>
                 );
                 $featured_the_query = new WP_Query( $featured ); 
                 if($featured_the_query){ ?>
-                <div class="col-md-4 col-sm-4 col-xs-4 article-all">
+                <div class="col-md-4 col-sm-4 col-xs-12 article-all">
                     <div class="page-header">
                         <h2><?php echo ($language =='vi')?'Bài liên quan':'Featured'; ?></h2>
                     </div>

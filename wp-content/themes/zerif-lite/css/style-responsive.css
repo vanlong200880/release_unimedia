@@ -11,7 +11,6 @@
 		display: none;
 	}
 }
-
 /* iPads (portrait) ----------- */
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -119,11 +118,33 @@
 	.article-all .top-sub-featured figure figcaption div.readmore a{
 		font-size: 10px;
 	}
-	/*#wrap-new-adv .big-new-adv{
+	#wrap-new-adv .big-new-adv{
 		height: 230px;
-	}*/
+		overflow: hidden;
+	}
 	#wrap-new-adv .big-new-adv .owl-theme .owl-controls{
 		bottom: 40px;
+	}
+	#wrapp-details .show-details form.wpcf7-form input.wpcf7-text{
+	  width: 100%;
+	  height: 32px;
+	}
+	#header .navigation nav.navbar-default .navbar-form .form-group select{
+		max-width: 105px;
+	}
+	/*--footer--*/
+	#footer .wrap-about, #footer .info-social{
+		padding-left: 15px;
+	}
+	#support{
+		bottom: 12%;
+		right: 10px;
+	}
+}
+@media (max-width: 1024px) and (orientation: landscape){
+	#wrap-new-adv .big-new-adv{
+		height: 303px;
+		overflow: hidden;
 	}
 }
 @media (max-width:767px){
@@ -433,6 +454,10 @@
     }
     .article-all .show-article figure figcaption div.readmore a{
 		font-size: 10px;
+	}
+	#wrapp-details .show-details form.wpcf7-form input.wpcf7-text{
+	  width: 100%;
+	  height: 32px;
 	}
 }
 @media (min-width:481px) and (max-width: 767px){
