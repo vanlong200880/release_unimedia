@@ -463,10 +463,10 @@
 .article-all .wrapp-categories .show-article{
   min-height: 330px;
 }
-#wrapp-details .show-details .content-details img{
+#wrapp-details .show-details img{
   padding: 0 30px;
 }
-#wrapp-details .show-details .content-details p{
+#wrapp-details .show-details p{
   margin: 20px 0;
 }
 #wrapp-details .page-header{
