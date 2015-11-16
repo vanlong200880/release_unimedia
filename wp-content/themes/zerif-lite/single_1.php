@@ -54,7 +54,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="col-md-8 col-sm-8 col-xs-8">
                 <div class="show-details">
                         <?php while ( have_posts() ) : the_post(); 
                             get_template_part( 'content', 'single' );
@@ -73,7 +73,7 @@ get_header(); ?>
                 );
                 $featured_the_query = new WP_Query( $featured ); 
                 if($featured_the_query){ ?>
-                <div class="col-md-4 col-sm-4 col-xs-12 article-all">
+                <div class="col-md-4 col-sm-4 col-xs-4 article-all">
                     <div class="page-header">
                         <h2><?php echo ($language =='vi')?'Bài liên quan':'Featured'; ?></h2>
                     </div>
@@ -126,16 +126,14 @@ get_header(); ?>
 </section><!--end wrapp-details-->
 
 <?php get_footer(); ?>
-<?php   else: ?>
+<?php    else: ?>
 
-	<?php while ( have_posts() ) : the_post(); 
+<?php while ( have_posts() ) : the_post(); 
         $listGalery = getGaleryFromPost($post);
         if($listGalery[0]){ ?>
 
-		<?php if(wpmd_is_notdevice() == true): ?>
-		<!-- is tablet and desktop -->
-		
-		<!doctype html>
+<?php if(wpmd_is_notphone() == true): ?>
+<!doctype html>
 <html>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -175,14 +173,25 @@ get_header(); ?>
  
 <!-- DIV YOUR WEBSITE --> 
 <div style="width:100%;margin:0 auto">
+  <?php else: ?> 
+    <?php get_header(); ?>
+ <?php endif; ?>
 <!-- BEGIN FLIPBOOK STRUCTURE -->  
 <div id="fb5-ajax">	
+         
+         
       <!-- BEGIN HTML BOOK -->      
-      <div data-current="magazine" class="fb5" id="fb5">                
+      <div data-current="magazine" class="fb5" id="fb5">      
+            
+  
+      
+                           
             <!-- BACKGROUND FOR BOOK -->  
             <div class="fb5-bcg-book"></div>                      
+          
             <!-- BEGIN CONTAINER BOOK -->
             <div id="fb5-container-book">
+     
                 <!-- BEGIN deep linking -->  
                 <section id="fb5-deeplinking">
                      <ul>
@@ -195,13 +204,16 @@ get_header(); ?>
                      </ul>
                  </section>
                 <!-- END deep linking -->  
+                
                 <!-- BEGIN ABOUT -->
                 <section id="fb5-about">
                     <?php 
+					
                         foreach ($listGalery[0]['ids'] as $k => $galery) {
                             if($k === 0){
                                 the_post_thumbnail(array(480, 635), array('id'    => 'id_'.$galery, 'alt' => trim(strip_tags(get_post_meta($galery, '_wp_attachment_image_alt', true))),));
                             }
+                            
                             ?>
                    <?php } ?>
                 </section>
@@ -219,6 +231,7 @@ get_header(); ?>
 							  'height' => 500,
 							  'src' => wp_get_attachment_url($galery)
 							);
+							
 							?>
                         <div data-background-image="<?php echo wp_get_attachment_url($galery); ?>" class="">
                              <!-- container page book --> 
@@ -235,45 +248,65 @@ get_header(); ?>
                 <!-- END PAGE 1 -->                          
               </div>
               <!-- END BOOK -->
+                           
+                
               <!-- arrows -->
               <a class="fb5-nav-arrow prev"></a>
               <a class="fb5-nav-arrow next"></a>
+                
+                
              </div>
              <!-- END CONTAINER BOOK -->
+    
+    
         <!-- BEGIN FOOTER -->
         <div id="fb5-footer">
+        
             <div class="fb5-bcg-tools"></div>
+             
             <a id="fb5-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" width="100" alt="<?php echo get_bloginfo('title'); ?>">
             </a>
+            
             <div class="fb5-menu" id="fb5-center">
                 <ul>                                        
+                    
                     <!-- icon_zoom_in -->                              
                     <li>
                         <a title="ZOOM IN" class="fb5-zoom-in"></a>
                     </li>                               
+                    
                     <!-- icon_zoom_out -->
+                     
                     <li>
                         <a title="ZOOM OUT " class="fb5-zoom-out"></a>
                     </li>                                
+                    
                     <!-- icon_zoom_auto -->
                     <li>
                         <a title="ZOOM AUTO " class="fb5-zoom-auto"></a>
                     </li>                                
+                    
                     <!-- icon_zoom_original -->
                     <li>
                         <a title="ZOOM ORIGINAL (SCALE 1:1)" class="fb5-zoom-original"></a>
                     </li>
+                                     
+                    
                     <!-- icon_allpages -->
                     <li>
                         <a title="SHOW ALL PAGES " class="fb5-show-all"></a>
                     </li>
+                                                    
+                    
                     <!-- icon_home -->
                     <li>
                         <a title="SHOW HOME PAGE " class="fb5-home"></a>
-                    </li>              
+                    </li>
+                                    
                 </ul>
             </div>
+            
             <div class="fb5-menu" id="fb5-right">
                 <ul> 
                     <!-- icon page manager -->                 
@@ -281,19 +314,29 @@ get_header(); ?>
                         <label for="fb5-page-number" id="fb5-label-page-number">PAGE</label>
                         <input type="text" id="fb5-page-number">
                         <button type="button">GO</button>
-                    </li>        
+                    </li>    
+                            
                     <!-- icon fullscreen -->                 
                     <li>
                         <a title="FULL / NORMAL SCREEN" class="fb5-fullscreen"></a>
-                    </li>                                                      
+                    </li>                                       
+                                    
                 </ul>
             </div>
+            
+            
+        
         </div>
         <!-- END FOOTER -->
+    
+    
         <!-- BEGIN ALL PAGES -->
           <div id="fb5-all-pages" class="fb5-overlay">
+    
           <section class="fb5-container-pages">
+    
             <div id="fb5-menu-holder">
+    
                 <ul id="fb5-slider">
                         <?php 
                         foreach ($listGalery[0]['ids'] as $k => $galery) {
@@ -304,12 +347,19 @@ get_header(); ?>
                             </li>
                             <?php } } ?>
                   </ul>
+            
               </div>
+    
           </section>
+    
          </div>
          <!-- END ALL PAGES -->
+
+
    </div>
    <!-- END HTML BOOK -->
+
+
     <!-- CONFIGURATION FLIPBOOK -->
     <script>    
     jQuery('#fb5').data('config',
@@ -330,122 +380,36 @@ get_header(); ?>
 	'lazy_loading_pages':'true'
     })
     </script>
+
+
 </div>
 <!-- END FLIPBOOK STRUCTURE -->    
+
+
+
 </div> 
 <!-- END DIV YOUR WEBSITE --> 
+
+       
+
+<?php if(wpmd_is_notphone() == true): ?>
 </body>
 </html>
-
-		
-		
-		
-		<?php else: ?>
-		<!-- is mobile -->
-
-<?php	 get_header() ?>
-
- <?php 
-					$arrJson = array();
-					$id = '';
-                        foreach ($listGalery[0]['ids'] as $k => $galery) {
-                            if($k > 0){
-								$uploads = wp_upload_dir();
-								$upload_path = $uploads['baseurl'];
-								$img = wp_get_attachment_metadata($galery);
-								$arrJson[] = array(
-								  'src' => $upload_path.'/'.$img['file'],
-								  'w' => $img['width'],
-								  'h' => $img['height'],
-								);
-							} else{
-								$id = $galery;
-							}
-						}
-					?>
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-     
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <div class="pswp__counter"></div>
-                <button id="photoswipeclose" class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-          </div>
-        </div>
-</div>
- 
-<script type="text/javascript">
-	var openPhotoSwipe = function() {
-    var pswpElement = document.querySelectorAll('.pswp')[0];
-	var items = <?php echo json_encode($arrJson); ?>
-    
-    // define options (if needed)
-    var options = {    
-        history: false,
-        focus: false,
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0,
-    };
-    
-    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-	gallery.listen('close', function() {
-		window.close();
-	});
-};
-openPhotoSwipe();
-</script>
-<?php get_footer() ?>
-		<?php endif; ?>
-		<?php } ?>
-		<?php endwhile;?>
-<!-- check photo book -->
+<?php else: ?>
+    <?php get_footer(); ?>
 <?php endif; ?>
+<?php }else{ ?>
+    <?php get_header(); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="data-empty"><?php echo ($language == 'vi')? 'Không có dữ liệu.':'Data empty'; ?></h1>
+        </div>
+    </div>
+</div>
+    <?php get_footer(); ?>
+<?php }							
+   endwhile;?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php endif; ?>
+<?php echo json_encode($arrJson); ?>

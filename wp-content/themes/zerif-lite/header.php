@@ -33,14 +33,13 @@ if(!empty($category)):
     if(!empty($category[0]->category_parent )){
 $taxonomy = get_term($category[0]->category_parent, 'category');
 if(is_single() == true && $taxonomy->slug ==='magazine'){ ?>
-<link type="text/css" href="<?php echo get_template_directory_uri() ?>/slipbook/css/style.css" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700">
-<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/turn.js"></script>              
-<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.fullscreen.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/jquery.address-1.6.min.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/wait.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/slipbook/js/onload.js"></script>
+
+<?php if(!wpmd_is_notdevice()): ?>
+<link type="text/css" href="<?php echo get_template_directory_uri() ?>/photoswipe/css/photoswipe.css" rel="stylesheet">
+<link type="text/css" href="<?php echo get_template_directory_uri() ?>/photoswipe/css/default-skin/default-skin.css" rel="stylesheet">
+<script src="<?php echo get_template_directory_uri() ?>/photoswipe/js/photoswipe.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/photoswipe/js/photoswipe-ui-default.min.js"></script>
+<?php endif; ?>
 <?php     
 }     }
 endif;
