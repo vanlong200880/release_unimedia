@@ -46,8 +46,8 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 border-right-footer last">
                     <div class="info-social">
                         <div class="icon-social">
-                            <span><a href=""><i class="fa fa-facebook-square"></i></a></span>
-                            <span><a href=""><i class="fa fa-twitter-square"></i></a></span>
+                            <span><a href="https://www.facebook.com/Unimedia-459692210885646/?fref=ts" targer="_blank"><i class="fa fa-facebook-square"></i></a></span>
+                            <span><a href="#"><i class="fa fa-twitter-square"></i></a></span>
                         </div>
                         <div class="wrap-ipisocial">
                             <!--<p>Nhung IPI</p>-->
