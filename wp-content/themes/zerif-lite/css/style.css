@@ -1,20 +1,20 @@
 
 /*--top header for unimedia services--*/
 #header .top-header{
-  margin: 20px 0;
+  margin: 4px 0 5px;
 }
 #header .top-header img{
-  width: 270px;
+  width: 140px;
 }
 #header .top-header ul.unimedia-services{
-  margin-top: 8px;
+  margin-top: 6px;
 }
 #header .top-header ul.unimedia-services li{
   display: inline-block;
   float: left;
-  width: 160px;
+  width: 155px;
   /*height: 68px;*/
-  margin-right: 5px;
+  margin-right: 3px;
 }
 #header .top-header ul.unimedia-services li:last-child{
   margin-right: 0px;
@@ -27,7 +27,8 @@
 }
 #wrap-new-adv .big-new-adv ul.unimedia-services li div.services p,
 #header .top-header ul.unimedia-services li div.services p{
-  text-align: center;
+  text-align: left;
+  padding-left: 40px;
 }
 #header .top-header ul.unimedia-services li div.services p a{
   color: #fff;
@@ -38,29 +39,28 @@
 }
 
 #header .top-header ul.unimedia-services li div.services.health,
-#header .top-header-sp ul.unimedia-services li div.services.health,
-#wrap-new-adv .big-new-adv ul.unimedia-services li div.services.health{
+#header .top-header-sp ul.unimedia-services li div.services.health{
   background-color: #95C11E;
 }
 #header .top-header ul.unimedia-services li div.services.taste,
-#header .top-header-sp ul.unimedia-services li div.services.taste,
-#wrap-new-adv .big-new-adv ul.unimedia-services li div.services.taste{
+#header .top-header-sp ul.unimedia-services li div.services.taste{
   background-color: #F39200;
 }
 #header .top-header ul.unimedia-services li div.services.real,
-#header .top-header-sp ul.unimedia-services li div.services.real,
-#wrap-new-adv .big-new-adv ul.unimedia-services li div.services.real{
+#header .top-header-sp ul.unimedia-services li div.services.real{
   background-color: #302683;
 }
-#header .top-header ul.unimedia-services li div.services.travel-edu,
-#header .top-header-sp ul.unimedia-services li div.services.travel-edu,
-#wrap-new-adv .big-new-adv ul.unimedia-services li div.services.travel-edu{
+#header .top-header ul.unimedia-services li div.services.home-elect,
+#header .top-header-sp ul.unimedia-services li div.services.home-elect{
   background-color: #009BB4;
 }
 #header .top-header ul.unimedia-services li div.services.four-seasons,
-#header .top-header-sp ul.unimedia-services li div.services.four-seasons,
-#wrap-new-adv .big-new-adv ul.unimedia-services li div.services.four-seasons{
+#header .top-header-sp ul.unimedia-services li div.services.four-seasons{
   background-color: #C51A1B;
+}
+#header .top-header ul.unimedia-services li div.services.car-tech,
+#header .top-header-sp ul.unimedia-services li div.services.car-tech{
+  background-color: #34495d;
 }
 
 /*--customize nav--*/
@@ -74,7 +74,7 @@
 #header .navigation nav.navbar-default .navbar-nav>li>a {
     color: #fff;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 #header .navigation nav.navbar-default .navbar-nav>.active>a, 
@@ -219,7 +219,7 @@
 /*--wrap-magazine--*/
 #wrap-magazine{
   background-color: #ECECEC;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 #wrap-magazine.wrap-magazine-view,
 #wrap-magazine.wrap-magazine-related{
@@ -249,7 +249,7 @@
 #wrap-magazine .show-magazine ul li figure figcaption{
   position: absolute;
   background: rgba(227,5,19,0.5);
-  padding: 15px 5px;
+  padding: 10px 5px;
   color: #fff;
   bottom: 0;
   left: 0;
@@ -284,7 +284,7 @@
   margin: 10px 0 20px;
 }
 .article-all .show-article figure figcaption a{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -292,7 +292,7 @@
   font-size: 14px;
 }
 .article-all .show-article-thumb figure figcaption a{
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
 }
 .article-all .show-article figure figcaption p{
@@ -312,7 +312,7 @@
 }
 .article-all .show-article figure figcaption div.readmore a{
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   color: #333;
   padding: 0 5px;
 }

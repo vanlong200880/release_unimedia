@@ -54,48 +54,55 @@ endif;
         <div class="top-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-2 col-sm-2">
                         <?php
                             echo '<a href="'.esc_url( home_url( '/' ) ).'">';
                                 echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
                             echo '</a>';
                         ?>
                     </div>
-                    <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="col-md-10 col-sm-10 col-xs-12">
                         <ul class="unimedia-services pull-right">
                             <li>
                                 <div class="services health">
-                                    <p><span class="icon-health-01"></span></p>
-                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/health-care/">SỨC KHỎE & CHĂM SÓC</a></p>
-                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/health-care/">HEALTH & CARE</a></p>
+                                    <span class="icon-icon-health-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/health-care/">THỜI TRANG & SỨC KHỎE</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/health-care/">FASHION & HEALTH</a></p>
                                 </div>
                             </li>
                             <li>
                                 <div class="services taste">
-                                    <p><span class="icon-taste-01"></span></p>
+                                    <span class="icon-icon-taste-01"></span>
                                     <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/taste-event/">ẨM THỰC & TIỆC</a></p>
                                     <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/taste-event/">TASTE & EVENT</a></p>
                                 </div>
                             </li>
                             <li>
                                 <div class="services real">
-                                    <p><span class="icon-real-01"></span></p>
+                                    <span class="icon-icon-real-01"></span>
                                     <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/real-estate-source/">NGUỒN ĐỊA ỐC</a></p>
                                     <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/real-estate-source/">REAL ESTATE SOURCE</a></p>
                                 </div>
                             </li>
                             <li>
-                                <div class="services travel-edu">
-                                    <p><span class="icon-travel-01"></span></p>
-                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">DU LỊCH & GIÁO DỤC</a></p>
-                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">TRAVEL & EDUCATION</a></p>
+                                <div class="services four-seasons">
+                                    <span class="icon-icon-promotion-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/seasons-promotion/">4 MÙA & KHUYẾN MÃI</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/seasons-promotion/">4 SEASONS & PROMOTION</a></p>
                                 </div>
                             </li>
                             <li>
-                                <div class="services four-seasons">
-                                    <p><span class="icon-promotion-01"></span></p>
-                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/seasons-promotion/">4 MÙA & KHUYẾN MÃI</a></p>
-                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/seasons-promotion/">4 SEASONS & PROMOTION</a></p>
+                                <div class="services home-elect">
+                                    <span class="icon-icon-elect-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">ĐIỆN MÁY & GIA DỤNG</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">HOME & ELECTRONICS</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="services car-tech">
+                                    <span class="icon-icon-car-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">XE & CÔNG NGHỆ</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">VIHICLE & TECHNOLOGY</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -113,15 +120,15 @@ endif;
                                 <div class="services health">	
                                     <div class="dropdown ">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <p><span class="icon-health-01"></span></p>
+                                            <p><span class="icon-icon-health-01"></span></p>
                                         </a>
                                             <ul class="dropdown-menu">
                                                 <li>
                                                     <p>
-                                                        <a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/health-care/">SỨC KHỎE & CHĂM SÓC</a>
+                                                        <a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/health-care/">THỜI TRANG & SỨC KHỎE</a>
                                                     </p>
                                                     <p>
-                                                        <a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/health-care/">HEALTH & CARE</a>
+                                                        <a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/health-care/">FASHION & HEALTH</a>
                                                     </p>
                                                 </li>
                                           </ul>
@@ -132,7 +139,7 @@ endif;
                                 <div class="services taste">	
                                     <div class="dropdown ">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <p><span class="icon-taste-01"></span></p>
+                                            <p><span class="icon-icon-taste-01"></span></p>
                                         </a>
                                             <ul class="dropdown-menu">
                                                 <li>
@@ -147,7 +154,7 @@ endif;
                                 <div class="services real">	
                                     <div class="dropdown ">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <p><span class="icon-real-01"></span></p>
+                                            <p><span class="icon-icon-real-01"></span></p>
                                         </a>
                                             <ul class="dropdown-menu">
                                                 <li>
@@ -159,30 +166,46 @@ endif;
                                 </div>
                             </li>
                             <li>
-                                <div class="services travel-edu">	
+                                <div class="services four-seasons"> 
                                     <div class="dropdown ">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <p><span class="icon-travel-01"></span></p>
+                                            <p><span class="icon-icon-promotion-01"></span></p>
                                         </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">DU LỊCH & GIÁO DỤC</a></p>
-                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">TRAVEL & EDUCATION</a></p>
+                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/seasons-promotion/">4 MÙA & KHUYẾN MÃI</a></p>
+                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/seasonss-promotion/">4 SEASONS & PROMOTION</a></p>
                                                 </li>
                                           </ul>
                                         </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="services four-seasons">	
+                                <div class="services home-elect">	
                                     <div class="dropdown ">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <p><span class="icon-promotion-01"></span></p>
+                                            <p><span class="icon-icon-elect-01"></span></p>
                                         </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/seasons-promotion/">4 MÙA & KHUYẾN MÃI</a></p>
-                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/seasonss-promotion/">4 SEASONS & PROMOTION</a></p>
+                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">ĐIỆN MÁY & GIA DỤNG</a></p>
+                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">HOME & ELECTRONICS</a></p>
+                                                </li>
+                                          </ul>
+                                        </div>
+                                </div>
+                            </li>
+                        
+                            <li>
+                                <div class="services car-tech"> 
+                                    <div class="dropdown ">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            <p><span class="icon-icon-car-01"></span></p>
+                                        </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/seasons-promotion/">XE & CÔNG NGHỆ</a></p>
+                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/seasonss-promotion/">VIHICLE & TECHNOLOGY</a></p>
                                                 </li>
                                           </ul>
                                         </div>
