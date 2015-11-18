@@ -27,7 +27,7 @@ if(!empty($keyword)):
         $listCategorySlug .= $type;
         break;
     default :
-        $listCategorySlug .= '4-seasons-promotion,taste-event-magazine,travel-education-magazine,real-estate-source-magazine, health-care-magazine';
+        $listCategorySlug .= '4-seasons-promotion,taste-event-magazine,home-electronics-magazine,real-estate-source-magazine, fashion-health-magazine,vihicle-technology-magazine';
     }
     if(!empty($listCategorySlug)){
         $args = array(

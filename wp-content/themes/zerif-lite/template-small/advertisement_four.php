@@ -14,7 +14,7 @@
             ),
             array(
                 'key'		 => 'group_advertisement',
-                'value'      => 'heath_care'
+                'value'      => 'fashion_health'
             ),
         ),
         'posts_per_page' => 4,
@@ -98,7 +98,35 @@
             ),
             array(
                 'key'		=> 'group_advertisement',
-                'value'     => 'trevel_education'
+                'value'     => 'home_electronics'
+            ),
+        ),
+        'posts_per_page' => 4,
+	);
+    $four_trevel_education_the_query = new WP_Query( $four_trevel_education_args ); 
+    if($four_trevel_education_the_query->have_posts()){
+        while ($four_trevel_education_the_query->have_posts()){
+            $four_trevel_education_the_query->the_post();
+            array_push($list_four_id, get_the_ID());
+        }
+    }
+    wp_reset_postdata();
+	
+	//get list id trevel_education
+    $four_trevel_education_args = array (					 
+		'post_status'    => 'publish',		
+		'order'          => 'DESC',
+		'orderby'        => 'date',
+        'post_type'      => 'post',
+        'category_name'  => 'advertisement',
+        'meta_query'     => array(
+            array(
+                'key'		=> 'highlight',
+                'value'     => true,
+            ),
+            array(
+                'key'		=> 'group_advertisement',
+                'value'     => 'vihicle_technology'
             ),
         ),
         'posts_per_page' => 4,

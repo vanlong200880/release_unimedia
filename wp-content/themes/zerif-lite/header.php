@@ -66,8 +66,8 @@ endif;
                             <li>
                                 <div class="services health">
                                     <span class="icon-icon-health-01"></span>
-                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/health-care/">THỜI TRANG & SỨC KHỎE</a></p>
-                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/health-care/">FASHION & HEALTH</a></p>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/fashion-health/">THỜI TRANG & SỨC KHỎE</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/fashion-health/">FASHION & HEALTH</a></p>
                                 </div>
                             </li>
                             <li>
@@ -94,15 +94,15 @@ endif;
                             <li>
                                 <div class="services home-elect">
                                     <span class="icon-icon-elect-01"></span>
-                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">ĐIỆN MÁY & GIA DỤNG</a></p>
-                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">HOME & ELECTRONICS</a></p>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/home-electronics/">ĐIỆN MÁY & GIA DỤNG</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/home-electronics/">HOME & ELECTRONICS</a></p>
                                 </div>
                             </li>
                             <li>
                                 <div class="services car-tech">
                                     <span class="icon-icon-car-01"></span>
-                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">XE & CÔNG NGHỆ</a></p>
-                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">VIHICLE & TECHNOLOGY</a></p>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/vihicle-technology/">XE & CÔNG NGHỆ</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/vihicle-technology/">VIHICLE & TECHNOLOGY</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -178,10 +178,10 @@ endif;
                                             <ul class="dropdown-menu">
                                                 <li>
                                                     <p>
-                                                        <a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/health-care/">THỜI TRANG & SỨC KHỎE</a>
+                                                        <a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/feshion-health/">THỜI TRANG & SỨC KHỎE</a>
                                                     </p>
                                                     <p>
-                                                        <a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/health-care/">FASHION & HEALTH</a>
+                                                        <a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/feshion-health/">FASHION & HEALTH</a>
                                                     </p>
                                                 </li>
                                           </ul>
@@ -241,8 +241,8 @@ endif;
                                         </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">ĐIỆN MÁY & GIA DỤNG</a></p>
-                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">HOME & ELECTRONICS</a></p>
+                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/home-electronics/">ĐIỆN MÁY & GIA DỤNG</a></p>
+                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/home-electronics/">HOME & ELECTRONICS</a></p>
                                                 </li>
                                           </ul>
                                         </div>
@@ -257,8 +257,8 @@ endif;
                                         </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/seasons-promotion/">XE & CÔNG NGHỆ</a></p>
-                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/seasonss-promotion/">VIHICLE & TECHNOLOGY</a></p>
+                                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/vihicle-technology/">XE & CÔNG NGHỆ</a></p>
+                                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/vihicle-technology/">VIHICLE & TECHNOLOGY</a></p>
                                                 </li>
                                           </ul>
                                         </div>
