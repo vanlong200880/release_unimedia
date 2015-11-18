@@ -1,10 +1,54 @@
-<?php
-/**
+<?php /**
  * The Template for displaying all single posts.
  */
 global $post;
 //                var_dump($post);
 $category = get_the_category($post->ID);
+?>
+<?php if(is_user_logged_in() && $category[0]->slug =='unideal' && $_REQUEST['admin'] == 'printer'): ?>
+
+<!DOCTYPE html>
+
+<html <?php language_attributes(); ?>>
+
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+
+
+<!--[if lt IE 9]>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css" type="text/css">
+<![endif]-->
+
+<?php //wp_head(); ?>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/print.css" type="text/css">
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.js"></script>
+</head>
+
+	<body <?php body_class($language); ?>>
+		<div class="print-page">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<?php while ( have_posts() ) : the_post(); 
+							the_content();
+						endwhile; // end of the loop. ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>
+<?php else: ?>
+
+
+<?php
 if(empty($category[0]->category_parent)):
 get_header(); ?>
 <section id="wrap-new-adv">
@@ -429,6 +473,8 @@ openPhotoSwipe();
 		<?php endwhile;?>
 <!-- check photo book -->
 <?php endif; ?>
+
+<?php endif;?>
 
 
 
