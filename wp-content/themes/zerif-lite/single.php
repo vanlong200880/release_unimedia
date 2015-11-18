@@ -232,50 +232,44 @@ get_header(); ?>
                      <ul>
                         <?php 
                             foreach ($listGalery[0]['ids'] as $k => $galery) { 
-                                if($k > 0){
+                                $k++;
+                                //if($k > 0){
 ?>
                           <li data-address="page<?php echo $k ?>" data-page="<?php echo $k; ?>"></li>
-                                <?php } } ?>
+                                <?php } //} ?>
+                          <?php if(count($listGalery[0]['ids'])%2 != 0): ?>
+                          <li data-address="page<?php echo count($listGalery[0]['ids'])+1 ?>" data-page="<?php echo count($listGalery[0]['ids'])+1; ?>"></li>
+                          <?php endif; ?>
                      </ul>
                  </section>
                 <!-- END deep linking -->  
                 <!-- BEGIN ABOUT -->
-                <section id="fb5-about">
+<!--                <section id="fb5-about">
                     <?php 
-                        foreach ($listGalery[0]['ids'] as $k => $galery) {
-                            if($k === 0){
-                                the_post_thumbnail(array(480, 635), array('id'    => 'id_'.$galery, 'alt' => trim(strip_tags(get_post_meta($galery, '_wp_attachment_image_alt', true))),));
-                            }
+//                        foreach ($listGalery[0]['ids'] as $k => $galery) {
+//                            if($k === 0){
+//                                the_post_thumbnail(array(480, 635), array('id'    => 'id_'.$galery, 'alt' => trim(strip_tags(get_post_meta($galery, '_wp_attachment_image_alt', true))),));
+//                            }
                             ?>
-                   <?php } ?>
-                </section>
+                   <?php //} ?>
+                </section>-->
                 <!-- END ABOUT -->
                 <!-- BEGIN BOOK -->
                 <div id="fb5-book">
                 <!-- BEGIN PAGE 1 -->
                 <?php 
-					$arrJson = array();
                         foreach ($listGalery[0]['ids'] as $k => $galery) {
-                            if($k > 0){ ?>
-							<?php 
-							$arrJson[] = array(
-							  'width' => 500,
-							  'height' => 500,
-							  'src' => wp_get_attachment_url($galery)
-							);
-							?>
+                            //if($k > 0){ ?>
                         <div data-background-image="<?php echo wp_get_attachment_url($galery); ?>" class="">
-                             <!-- container page book --> 
-                             <div class="fb5-cont-page-book">
-                                 <!-- description for page --> 
-                                 <div class="fb5-page-book"></div> 
-                                <!-- number page and title  -->                
-                                <div class="fb5-meta">
-                                        <span class="fb5-num"><?php echo $k; ?></span>
-                                 </div> 
-                             </div> <!-- end container page book --> 
+                             
                         </div>
-                            <?php } } ?>
+                            <?php } //} ?>
+                
+                        <?php if(count($listGalery[0]['ids'])%2 != 0): ?>
+                          <div data-background-image="none" class="">
+                             
+                        </div>
+                          <?php endif; ?>
                 <!-- END PAGE 1 -->                          
               </div>
               <!-- END BOOK -->
@@ -341,12 +335,13 @@ get_header(); ?>
                 <ul id="fb5-slider">
                         <?php 
                         foreach ($listGalery[0]['ids'] as $k => $galery) {
-                            if($k > 0){ ?>
+                            //if($k > 0){ ?>
                     
                             <li class="<?php echo $k; ?>">
                                 <img alt="" data-src="<?php echo wp_get_attachment_url($galery, array(120,170)); ?>">
                             </li>
-                            <?php } } ?>
+                            <?php } //} ?>
+                            
                   </ul>
               </div>
           </section>
@@ -391,9 +386,7 @@ get_header(); ?>
 
  <?php 
 					$arrJson = array();
-					$id = '';
                         foreach ($listGalery[0]['ids'] as $k => $galery) {
-                            if($k > 0){
 								$uploads = wp_upload_dir();
 								$upload_path = $uploads['baseurl'];
 								$img = wp_get_attachment_metadata($galery);
@@ -402,9 +395,6 @@ get_header(); ?>
 								  'w' => $img['width'],
 								  'h' => $img['height'],
 								);
-							} else{
-								$id = $galery;
-							}
 						}
 					?>
 
@@ -456,7 +446,7 @@ get_header(); ?>
         history: false,
         focus: false,
         showAnimationDuration: 0,
-        hideAnimationDuration: 0,
+        hideAnimationDuration: 0
     };
     
     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
