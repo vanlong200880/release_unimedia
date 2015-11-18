@@ -1,15 +1,15 @@
 
 @media (min-width: 1025px){
 	/*--show and hide--*/
-	/*#header .navigation nav.navbar>.container .navbar-brand{
+	#header .navigation nav.navbar>.container .navbar-brand{
 		display: none;
-	}*/
-	/*#header .top-header-sp{
+	}
+	#header .top-header-sp{
 		display: none;
-	}*/
-	/*#header .wrapp-form-search-sp{
+	}
+	#header .wrapp-form-search-sp{
 		display: none;
-	}*/
+	}
 }
 /* iPads (portrait) ----------- */
 
