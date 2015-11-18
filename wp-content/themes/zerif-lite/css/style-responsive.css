@@ -1,13 +1,25 @@
 
 @media (min-width: 1025px){
 	/*--show and hide--*/
+	#header .navigation{
+		display: block;
+	}
+	#header .navigation-tablet{
+		display: none;
+	}
 	#header .navigation nav.navbar>.container .navbar-brand{
 		display: none;
 	}
 	#header .top-header-sp{
 		display: none;
 	}
+	#header .top-header-tablet{
+		display: none;
+	}
 	#header .wrapp-form-search-sp{
+		display: none;
+	}
+	#header .wrapp-form-search-tablet{
 		display: none;
 	}
 }
@@ -20,79 +32,234 @@
 		font-weight: bold;
 	}
 	/*--show and hide--*/
-	/*#header .navigation nav.navbar>.container .navbar-brand{
+	#header .navigation nav.navbar>.container .navbar-brand{
+		display: none;
+	}
+	#header .navigation{
+		display: none;
+	}
+	#header .navigation-tablet{
 		display: block;
 	}
 	#header .top-header-sp{
-		display: block;
+		display: none;
 	}
 	#header .top-header{
 		display: none;
 	}
+	#header .top-header-tablet{
+		display: block;
+	}
 	#header .wrapp-form-search-sp{
+		display: none;
+	}
+	#header .wrapp-form-search-tablet{
 		display: block;
 	}
 	#wrap-new-adv .big-new-adv ul.unimedia-services{
 		display: none;
 	}
 	#header .navigation nav.navbar-default form.hide-search{
-		display: none;
-	}*/
+		/*display: block;*/
+	}
+	/*--css top-header-sp--*/
+	#header .top-header-tablet ul.unimedia-services{
+		width: 100%;
+	}
+	#header .top-header-tablet ul.unimedia-services li{
+		display: inline-block;
+		float: left;
+		width: 16.46666%;
+		margin-right: 0.2%;
+	}
+	#header .top-header-tablet ul.unimedia-services li:last-child{
+		width: 16.66666%;
+		margin-right: 0;
+	}
+	#header .top-header-tablet ul.unimedia-services li div.services p a{
+		font-size: 8px;
+	}
+	#header .top-header-tablet .container{
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	#header .top-header-tablet {
+	    margin: 0px 0 10px;
+	}
+	#header .navigation nav.navbar-default .navbar-nav>li>a{
+		font-size: 12px;
+		padding:15px 8px;
+	}
+	#wrap-magazine .show-magazine ul li figure figcaption{
+		padding: 10px;
+	}
+	#wrap-magazine .show-magazine ul li figure figcaption p a{
+		font-size: 13px;
+	}
+	#wrap-new-adv .big-new-adv .show-adv figure figcaption{
+		padding: 5px;
+		font-size: 12px;
+	}
+	#wrap-new-adv .top-sub-adv .show-adv figure figcaption {
+	    padding: 3px;
+	    font-size: 9px;
+	}
+	.article-all .show-article figure figcaption p,
+	.article-all .show-article-thumb figure figcaption a{
+		font-size: 13px;
+	}
+	#header .top-header ul.unimedia-services{
+		margin-top: 0px;
+	}
+	/*--magazine list--*/
+	#wrap-magazine .show-magazine ul li{
+		width: 98%;
+		height: 98%;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine ul li{
+		width: 24%;
+	    height: 24%;
+	    margin-right: 1.3333%;
+		margin-bottom:20px;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine ul li:last-child{
+		margin-right: 0%
+	}
+	/*--categories details--*/
+	#wrapp-details .show-details .content-details img{
+	  padding: 0;
+	}
+	.article-all .wrapp-categories figure figcaption a,
+	.article-all .top-sub-featured figure figcaption a{
+		font-size: 14px;
+	}
+	.article-all .wrapp-categories figure figcaption div.readmore a,
+	.article-all .top-sub-featured figure figcaption div.readmore a{
+		font-size: 10px;
+	}
+	#wrap-new-adv .big-new-adv{
+		height: 230px;
+		overflow: hidden;
+	}
+	#wrap-new-adv .big-new-adv .owl-theme .owl-controls{
+		bottom: 40px;
+	}
+	#wrapp-details .show-details form.wpcf7-form input.wpcf7-text{
+	  width: 100%;
+	  height: 32px;
+	}
+	
+	#header .wrapp-form-search-tablet .form-inline div.form-group-sp{
+		position: relative;
+	}
+	#header .wrapp-form-search-tablet .form-inline div.form-group-sp button.btn {
+	    margin-top: 0px;
+	    padding: 7px 12px;
+	    position: absolute;
+	    background-color: #2A255C;
+	    right: 0;
+	    top: 0;
+	    border-radius: 0;
+	    border:none;
+	}
+	#header .wrapp-form-search-tablet .form-inline button i.fa{
+	    color: #fff;
+	}
+	#header .wrapp-form-search-tablet .form-inline .form-group {
+	    margin-bottom: 10px;
+	}
+	#header .navigation-tablet .logo-search img{
+		width: 150px;
+		margin-bottom: 10px;
+	}
+	#header .navigation-tablet .menu-tablet{
+		background-color: #E30513;
+		margin-bottom: 20px;
+	}
+	#header .navigation-tablet .menu-tablet ul li{
+		display: inline-block;
+		float: left;
+		margin-right: 10px;
+	}
+	#header .navigation-tablet .menu-tablet ul li a{
+		color: #fff;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding-left: 0;
+	}
+	#header .navigation-tablet .wrapp-form-search-tablet .navbar-form{
+		margin-top: 12px;
+		width: 100%;
+		text-align: right;
+	}
+	#header .navigation-tablet .wrapp-form-search-tablet{
+		width: 100%;
+	}
+	#header .navigation-tablet .wrapp-form-search-tablet .navbar-form input.form-control{
+		width: 300px;
+	}
+	/*--footer--*/
+	#footer .wrap-about, #footer .info-social{
+		padding-left: 15px;
+	}
+	#footer .wrap-about h1{
+		font-size: 30px;
+	}
+	#support{
+		bottom: 12%;
+		right: 10px;
+	}
+	
+}
+@media screen and (max-width: 1024px) and (orientation: landscape){
+	#wrap-new-adv .big-new-adv{
+		height: 303px;
+		overflow: hidden;
+	}
+	
+}
+@media (max-width:767px){
+	h2{
+		font-size: 20px;
+		font-weight: bold;
+	}
 	/*--show and hide--*/
+	#header .navigation{
+		display: block;
+	}
+	#header .navigation-tablet{
+		display: none;
+	}
 	#header .navigation nav.navbar>.container .navbar-brand{
 		display: block;
+	}
+	#header .navigation-tablet nav.navbar>.container .navbar-brand{
+		display: none;
 	}
 	#header .top-header-sp{
 		display: block;
 	}
 	#header .top-header{
+		display: none;
+	}
+	#header .top-header-tablet{
 		display: none;
 	}
 	#header .wrapp-form-search-sp{
 		display: block;
 		margin-top: 10px;
 	}
+	#header .wrapp-form-search-tablet{
+		display: none;
+	}
 	#wrap-new-adv .big-new-adv ul.unimedia-services{
 		display: none;
 	}
 	#header .navigation nav.navbar-default form.hide-search{
 		display: none;
 	}
-	/*--css top-header-sp--*/
-	/*#header .top-header img{
-		width: 100%;
-		height: 100%;
-		padding-left: 10px;
-	}
-	#header .top-header ul.unimedia-services{
-		width: 100%;
-	}
-	#header .top-header ul.unimedia-services li{
-		width: 18.9%;
-		margin-right: 1px;
-	}
-	#header .top-header ul.unimedia-services li div.services p span.icon-health-01, 
-	#header .top-header ul.unimedia-services li div.services p span.icon-promotion-01, 
-	#header .top-header ul.unimedia-services li div.services p span.icon-real-01, 
-	#header .top-header ul.unimedia-services li div.services p span.icon-taste-01, 
-	#header .top-header ul.unimedia-services li div.services p span.icon-travel-01{
-		font-size: 25px;
-	}
-	#header .top-header ul.unimedia-services li div.services p a{
-		font-size: 8px;
-	}
-	#header .top-header .container{
-		width: 100%;
-		padding-right: 0;
-		padding-left: 0;
-	}
-	#header .top-header {
-	    margin: 15px 0;
-	}
-	#header .navigation nav.navbar-default .navbar-nav>li>a{
-		font-size: 12px;
-		padding:15px 8px;
-	}*/
+
 	/*--css top-header-sp--*/
 	#header .top-header-sp{
 		width: 100%;
@@ -155,6 +322,7 @@
 		position: absolute;
 		left: auto;
 	}
+
 	/*--customize nav--*/
 	#header .navbar.navbar-default {
 	  background-color: #fff;
@@ -261,94 +429,7 @@
 	#header .navigation nav.navbar-default .navbar-toggle:focus{
 		background-color: transparent;
 	}
-	#wrap-magazine .show-magazine ul li figure figcaption{
-		padding: 10px;
-	}
-	#wrap-magazine .show-magazine ul li figure figcaption p a{
-		font-size: 13px;
-	}
-	#wrap-new-adv .big-new-adv .show-adv figure figcaption{
-		padding: 5px;
-		font-size: 12px;
-	}
-	#wrap-new-adv .top-sub-adv .show-adv figure figcaption {
-	    padding: 3px;
-	    font-size: 9px;
-	}
-	.article-all .show-article figure figcaption p,
-	.article-all .show-article-thumb figure figcaption a{
-		font-size: 13px;
-	}
-	#header .top-header ul.unimedia-services{
-		margin-top: 0px;
-	}
-	/*--magazine list--*/
-	#wrap-magazine .show-magazine ul li{
-		width: 98%;
-		height: 98%;
-	}
-	#wrap-magazine.wrap-magazine-related .show-magazine ul li{
-		width: 24%;
-	    height: 24%;
-	    margin-right: 1.3333%;
-		margin-bottom:20px;
-	}
-	#wrap-magazine.wrap-magazine-related .show-magazine ul li:last-child{
-		margin-right: 0%
-	}
-	/*--categories details--*/
-	#wrapp-details .show-details .content-details img{
-	  padding: 0;
-	}
-	.article-all .wrapp-categories figure figcaption a,
-	.article-all .top-sub-featured figure figcaption a{
-		font-size: 14px;
-	}
-	.article-all .wrapp-categories figure figcaption div.readmore a,
-	.article-all .top-sub-featured figure figcaption div.readmore a{
-		font-size: 10px;
-	}
-	#wrap-new-adv .big-new-adv{
-		height: 230px;
-		overflow: hidden;
-	}
-	#wrap-new-adv .big-new-adv .owl-theme .owl-controls{
-		bottom: 40px;
-	}
-	#wrapp-details .show-details form.wpcf7-form input.wpcf7-text{
-	  width: 100%;
-	  height: 32px;
-	}
-	#header .navigation nav.navbar-default .navbar-form .form-group select{
-		max-width: 105px;
-	}
-	/*--footer--*/
-	#footer .wrap-about, #footer .info-social{
-		padding-left: 15px;
-	}
-	#footer .wrap-about h1{
-		font-size: 30px;
-	}
-	#support{
-		bottom: 12%;
-		right: 10px;
-	}
-	.navbar-form .form-control{
-		max-width: 150px;
-	}
-}
-@media screen and (max-width: 1024px) and (orientation: landscape){
-	#wrap-new-adv .big-new-adv{
-		height: 303px;
-		overflow: hidden;
-	}
-	
-}
-@media (max-width:767px){
-	h2{
-		font-size: 20px;
-		font-weight: bold;
-	}
+
 	/*--new advertising--*/
 	#wrap-new-adv .big-new-adv .show-adv figure figcaption, 
 	#wrap-new-adv .top-sub-adv .show-adv figure figcaption {
@@ -488,7 +569,7 @@
 }
 @media (min-width:481px) and (max-width: 767px){
 	h2{
-		font-size: 24px;
+		font-size: 30px;
 	}
 	#wrap-magazine .show-magazine ul div.owl-item{
 		margin-right: 0%;

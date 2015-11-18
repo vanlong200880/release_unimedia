@@ -111,6 +111,59 @@ endif;
             </div>
         </div><!--end top-header-->
 
+        <div class="top-header-tablet">
+            <dic class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="unimedia-services">
+                            <li>
+                                <div class="services health">
+                                    <span class="icon-icon-health-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/health-care/">THỜI TRANG & SỨC KHỎE</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/health-care/">FASHION & HEALTH</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="services taste">
+                                    <span class="icon-icon-taste-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/taste-event/">ẨM THỰC & TIỆC</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/taste-event/">TASTE & EVENT</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="services real">
+                                    <span class="icon-icon-real-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/real-estate-source/">NGUỒN ĐỊA ỐC</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/real-estate-source/">REAL ESTATE SOURCE</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="services four-seasons">
+                                    <span class="icon-icon-promotion-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/seasons-promotion/">4 MÙA & KHUYẾN MÃI</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/seasons-promotion/">4 SEASONS & PROMOTION</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="services home-elect">
+                                    <span class="icon-icon-elect-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">ĐIỆN MÁY & GIA DỤNG</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">HOME & ELECTRONICS</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="services car-tech">
+                                    <span class="icon-icon-car-01"></span>
+                                    <p><a class="vi" href="<?php echo get_site_url() ?>/vi/category/magazine/travel-education/">XE & CÔNG NGHỆ</a></p>
+                                    <p><a class="en" href="<?php echo get_site_url() ?>/en/category/magazine/travel-education/">VIHICLE & TECHNOLOGY</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!--end col-sm-12-->
+                </div>
+            </dic>
+        </div><!--end top-header-tablet-->
+
         <div class="top-header-sp">
             <div class="container">
                 <div class="row">
@@ -255,6 +308,52 @@ endif;
                 </div>
             </nav>
         </div><!-- /navigation -->
+
+
+        <div class="navigation-tablet">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="logo-search">
+                        <div class="col-sm-3">
+                            <div class="logo-tablet">
+                                <?php
+                                    echo '<a href="'.esc_url( home_url( '/' ) ).'">';
+                                        echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
+                                    echo '</a>';
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapp-form-search-tablet">
+                        <div class="col-sm-9">
+                            <?php get_search_form(); ?>
+                        </div>
+                    </div><!--end wrapp-form-search-tablet-->
+
+                </div>
+            </div>
+         
+            <div class="menu-tablet">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <?php
+                                wp_nav_menu( array(
+                                    'theme_location' => 'primary',
+                                    'menu'=> 'menu_top_private',
+                                    'menu_class' => 'nav navbar-nav',
+                                    'container_class' => '',
+                                ) );
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div><!-- /navigation-tablet-->
+        
+
 
         <div class="wrapp-form-search-sp">
             <div class="container">

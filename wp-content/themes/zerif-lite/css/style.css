@@ -25,10 +25,22 @@
   color: #fff;
   padding: 0 0 5px;
 }
+#header .top-header-tablet ul.unimedia-services li div.services{
+  padding: 0 0 5px;
+}
 #wrap-new-adv .big-new-adv ul.unimedia-services li div.services p,
 #header .top-header ul.unimedia-services li div.services p{
   text-align: left;
   padding-left: 40px;
+}
+#header .top-header-tablet ul.unimedia-services li div.services p{
+  text-align: left;
+  padding-left: 25px;
+}
+#header .top-header-tablet ul.unimedia-services li div.services p a{
+  font-size: 8px;
+  color: #fff;
+  text-decoration: none;
 }
 #header .top-header ul.unimedia-services li div.services p a{
   color: #fff;
@@ -39,26 +51,32 @@
 }
 
 #header .top-header ul.unimedia-services li div.services.health,
+#header .top-header-tablet ul.unimedia-services li div.services.health,
 #header .top-header-sp ul.unimedia-services li div.services.health{
   background-color: #95C11E;
 }
 #header .top-header ul.unimedia-services li div.services.taste,
+#header .top-header-tablet ul.unimedia-services li div.services.taste,
 #header .top-header-sp ul.unimedia-services li div.services.taste{
   background-color: #F39200;
 }
 #header .top-header ul.unimedia-services li div.services.real,
+#header .top-header-tablet ul.unimedia-services li div.services.real,
 #header .top-header-sp ul.unimedia-services li div.services.real{
   background-color: #302683;
 }
 #header .top-header ul.unimedia-services li div.services.home-elect,
+#header .top-header-tablet ul.unimedia-services li div.services.home-elect,
 #header .top-header-sp ul.unimedia-services li div.services.home-elect{
   background-color: #009BB4;
 }
 #header .top-header ul.unimedia-services li div.services.four-seasons,
+#header .top-header-tablet ul.unimedia-services li div.services.four-seasons,
 #header .top-header-sp ul.unimedia-services li div.services.four-seasons{
   background-color: #C51A1B;
 }
 #header .top-header ul.unimedia-services li div.services.car-tech,
+#header .top-header-tablet ul.unimedia-services li div.services.car-tech,
 #header .top-header-sp ul.unimedia-services li div.services.car-tech{
   background-color: #34495d;
 }
