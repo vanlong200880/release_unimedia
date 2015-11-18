@@ -55,6 +55,10 @@ define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 
+define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
+define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
+
+
 define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/release_unimedia');
 define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/release_unimedia');
 
@@ -80,7 +84,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 

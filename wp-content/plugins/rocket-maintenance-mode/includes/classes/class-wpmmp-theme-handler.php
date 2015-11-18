@@ -146,7 +146,7 @@ class Wpmmp_Theme_Handler {
 	function theme_change() {
 
 		if ( is_admin() || current_user_can( 'manage_options' ) 
-			&& ! defined( 'WPMMP_DEBUG_MODE' ) )
+			&& ! defined( 'WPMMP_DEBUG_MODE' ) || current_user_can('read_private_posts') )
 			return FALSE;
 
 		add_action( 'template_redirect', array( $this, 'template_hook' ) );
