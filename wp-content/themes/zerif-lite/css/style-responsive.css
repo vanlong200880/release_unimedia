@@ -338,9 +338,10 @@
 	}
 	#header .navigation nav.navbar-default{
 		background-color: #fff;
+		height: auto;
 	}
 	#header .navigation nav.navbar-default .navbar-brand{
-		padding: 0 0 0 10px;
+		padding: 0 0 0 15px;
 		height: auto;
 	}
 	#header .navigation nav.navbar .navbar-brand img {
