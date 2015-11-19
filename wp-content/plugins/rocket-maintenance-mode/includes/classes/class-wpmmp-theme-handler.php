@@ -145,15 +145,18 @@ class Wpmmp_Theme_Handler {
 
 	function theme_change() {
 		$uri = $_SERVER['REDIRECT_URL'];
-		$arr = array('/en/api/get_category_posts/', '/api/get_category_posts/');
-		if (in_array($uri, $arr)){
-			return false;
-		}
-		if ( is_admin() || current_user_can( 'manage_options' ) 
-			&& ! defined( 'WPMMP_DEBUG_MODE' ) || current_user_can('read_private_posts') )
-			return FALSE;
+		$uri = explode('/', $uri);
+		var_dump($uri);
+		if (in_array('api', $uri)){
+		}else{
+			var_dump('sdf');
+			if ( is_admin() || current_user_can( 'manage_options' ) 
+				&& ! defined( 'WPMMP_DEBUG_MODE' ) || current_user_can('read_private_posts') )
+				return FALSE;
 
-		add_action( 'template_redirect', array( $this, 'template_hook' ) );
+			add_action( 'template_redirect', array( $this, 'template_hook' ) );
+		}
+		
 
 	}
 
