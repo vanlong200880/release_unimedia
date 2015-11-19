@@ -28,7 +28,7 @@
 @media screen and (min-width: 768px) and (max-width: 1024px){
 	
 	h2{
-		font-size: 30px;
+		font-size: 20px;
 		font-weight: bold;
 	}
 	/*--show and hide--*/
@@ -69,12 +69,14 @@
 	#header .top-header-tablet ul.unimedia-services li{
 		display: inline-block;
 		float: left;
-		width: 16.46666%;
-		margin-right: 0.2%;
+		width: 16.66666666666667%;
+		/*margin-right: 0.2%;*/
+		border-right: 1px solid #fff;
 	}
 	#header .top-header-tablet ul.unimedia-services li:last-child{
-		width: 16.66666%;
-		margin-right: 0;
+		/*width: 16.66666%;*/
+		/*margin-right: 0;*/
+		border-right: none;
 	}
 	#header .top-header-tablet ul.unimedia-services li div.services p a{
 		font-size: 8px;
@@ -86,6 +88,7 @@
 	}
 	#header .top-header-tablet {
 	    margin: 0px 0 10px;
+	    padding:0;
 	}
 	#header .navigation nav.navbar-default .navbar-nav>li>a{
 		font-size: 12px;
@@ -176,17 +179,19 @@
 	#header .navigation-tablet .menu-tablet{
 		background-color: #E30513;
 		margin-bottom: 20px;
+		height: 40px;
 	}
 	#header .navigation-tablet .menu-tablet ul li{
 		display: inline-block;
 		float: left;
-		margin-right: 10px;
+		/*margin-right: 10px;*/
 	}
 	#header .navigation-tablet .menu-tablet ul li a{
 		color: #fff;
 		font-size: 12px;
+		padding: 12px 30px 11px 0; 
+		display: block;
 		text-transform: uppercase;
-		padding-left: 0;
 	}
 	#header .navigation-tablet .wrapp-form-search-tablet .navbar-form{
 		margin-top: 12px;
@@ -504,7 +509,7 @@
 		margin-bottom: 0;
 	}
 	#wrap-magazine .show-magazine ul div.owl-item{
-		margin-right: 0px;
+		margin:0px;
 	}
 	/*--footer--*/
 	#footer{
@@ -579,8 +584,9 @@
 	    height: 96%;
 	}
 	#wrap-magazine.wrap-magazine-related .show-magazine ul li{
-		width: 49%;
-		margin-right: 2%;
+		width: 96%;
+	    height: 96%;
+		/*margin-right: 2%;*/
 	}
 	#wrap-magazine.wrap-magazine-related .show-magazine ul li:nth-child(2n+2){
 		margin-right: 0%;
