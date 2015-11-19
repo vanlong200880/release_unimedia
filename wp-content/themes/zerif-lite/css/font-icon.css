@@ -127,6 +127,7 @@
 #header .top-header ul.unimedia-services li div.services span.icon-icon-car-01{
   font-size: 30px;
   position: relative;
+  display: block;
 }
 #header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-health-01,
 #header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-promotion-01,
@@ -137,6 +138,7 @@
   font-size: 20px;
   position: relative;
   color: #fff;
+  display: block;
 }
 #header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-health-01:before,
 #header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-promotion-01:before,

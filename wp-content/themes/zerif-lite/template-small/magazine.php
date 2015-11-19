@@ -7,7 +7,7 @@
             'parent'            => $parent_obj->term_id,
             'taxonomy'          => 'category',
             'hide_empty'        => 1 ,
-            'number'    => 5,
+            'number'    => 6,
           );
         $categories = get_categories( $args ); ?>
 <div class="title magazine">

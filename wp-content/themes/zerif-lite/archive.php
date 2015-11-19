@@ -105,6 +105,16 @@ $parent = get_category($category[0]->category_parent);
 
 <?php else: ?>
  <?php if ( have_posts() ) : ?>
+	<section id="wrap-magazine">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                    <?php get_template_part('template-small/magazine'); ?>
+            </div>
+        </div>
+    </div>
+</section>
+	
 	<section id="four-seasons" class="article-all fix-top">
 		<div class="container">
 			<div class="row">

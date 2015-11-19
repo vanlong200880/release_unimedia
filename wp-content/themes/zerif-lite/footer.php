@@ -164,9 +164,9 @@ best choice for all companies to bring products & services to millions of custom
           });
 
           $("#owl-product-carousel-first").owlCarousel({
-                items : 5,
-                itemsDesktop: [1400, 5],
-                itemsDesktopSmall: [1100, 5],
+                items : 6,
+                itemsDesktop: [1400, 6],
+                itemsDesktopSmall: [1100, 6],
                 itemsTablet: [767, 2],
                 itemsMobile: [480, 1],
                 autoPlay: false,

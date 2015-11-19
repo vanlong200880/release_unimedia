@@ -31,7 +31,7 @@
 #wrap-new-adv .big-new-adv ul.unimedia-services li div.services p,
 #header .top-header ul.unimedia-services li div.services p{
   text-align: left;
-  padding-left: 40px;
+  padding-left: 35px;
 }
 #header .top-header-tablet ul.unimedia-services li div.services p{
   text-align: left;
@@ -206,6 +206,7 @@
 #wrap-new-adv .top-sub-adv .mg-20{
   margin-bottom: 20px;
 }
+#wrap-new-adv .top-sub-adv .mg-20:nth-last-child(2),
 #wrap-new-adv .top-sub-adv .mg-20:last-child{
   margin-bottom: 0;
 }
@@ -234,6 +235,9 @@
   height: 370px;
 }
 
+#wrap-new-adv{
+	margin-bottom: 20px;
+}
 /*--wrap-magazine--*/
 #wrap-magazine{
   background-color: #ECECEC;
@@ -247,16 +251,15 @@
 #wrap-magazine .show-magazine ul li{
   display: inline-block;
   float: left;
-  width: 218px;
-  height: 308px;
+  width: 180px;
   margin-right: 13px;
 }
 #wrap-magazine .show-magazine ul div.owl-item{
     margin-right: 2px;
   }
 #wrap-magazine.wrap-magazine-related .show-magazine ul li{
-  width: 275px;
-  height: 389px;
+  width: 218px;
+  height: 308px;
 }
 #wrap-magazine .show-magazine ul li:last-child{
   margin-right: 0px;
@@ -296,6 +299,11 @@
 }
 #wrap-magazine .show-magazine ul li figure figcaption p a{
   text-transform: uppercase;
+  font-size: 12px;
+}
+#wrap-magazine .show-magazine ul li figure figcaption p a:hover{
+  text-decoration: underline;
+  color: #FFF;
 }
 /*--Health and Taste--*/
 .article-all .show-article figure figcaption{

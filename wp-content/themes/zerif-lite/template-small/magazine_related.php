@@ -33,7 +33,7 @@
                     </div>
                 </div><!--end title-->
                 <div class="show-magazine" >
-                    <ul id="owl-product-carousel1">
+                    <ul id="owl-product-carousel">
 
                         <?php for ($i=$current; $i<$to; ++$i){
                             $category = $categories_related[$i];
