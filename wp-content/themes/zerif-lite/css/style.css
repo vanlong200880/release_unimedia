@@ -273,7 +273,7 @@
   }
 #wrap-magazine.wrap-magazine-related .show-magazine ul li{
   width: 218px;
-  height: 308px;
+  /*height: 308px;*/
 }
 #wrap-magazine .show-magazine ul li:last-child{
   margin-right: 0px;
