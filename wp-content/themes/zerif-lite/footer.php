@@ -36,11 +36,11 @@
                     <div class="wrap-about">
                         <h1><?php echo ($language == 'vi')? 'Giới thiệu': 'about us'; ?></h1>
 						<?php if($language == 'vi'): ?>
-						<p>Để mang sản phẩm, thương hiệu đến gần hơn người tiêu dùng, các doanh nghiệp đã và đang thực hiện rất nhiều hình thức PR – Marketing với mức chi phí không nhỏ, nhưng đã trở nên bão hòa trong thời đại hiện nay. </p>
+						<!-- <p>Để mang sản phẩm, thương hiệu đến gần hơn người tiêu dùng, các doanh nghiệp đã và đang thực hiện rất nhiều hình thức PR – Marketing với mức chi phí không nhỏ, nhưng đã trở nên bão hòa trong thời đại hiện nay. </p> -->
                         <p><b>UNIMEDIA</b> tự hào cho ra mắt ấn phẩm mang phong cách hoàn toàn khác biệt với 100% quảng cáo – phát triển thành công hơn 15 năm tại thị trường Mỹ. Chúng tôi tin chắc UNIMEDIA sẽ là lựa chọn hàng đầu cho các doanh nghiệp để đưa sản phẩm, dịch vụ của mình đến tay người tiêu dùng một cách nhanh chóng và hiệu quả nhất.</p>
 						<?php else: ?>
 						
-						<p>For increasing the customers’awareness about products and brands, most companies have spent more and more expenses on means of PR – Marketing, which is getting into saturation nowsadays.</p>
+						<!-- <p>For increasing the customers’awareness about products and brands, most companies have spent more and more expenses on means of PR – Marketing, which is getting into saturation nowsadays.</p> -->
 						<p>UNIMEDIA proudly issue advertising magazines in completely impressive version with 100% ads – used to succeed over 15 years in USA. We strongly believe that UNIMEDIA is the 
 best choice for all companies to bring products & services to millions of customer fast and effectively.</p>
 						<?php endif; ?>

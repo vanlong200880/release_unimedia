@@ -100,6 +100,7 @@
     font-size: 13px;
     font-weight: bold;
     padding-top: 10px;
+    padding-bottom: 12px;
     line-height: inherit;
 }
 #header .navigation nav.navbar-default .navbar-nav>.active>a, 
