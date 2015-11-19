@@ -113,23 +113,23 @@ add_action('after_setup_theme', 'zerif_setup');
 
 
 // ADD NEW COLUMN
-function uni_columns_head($defaults) {
-    $defaults['featured_image'] = 'Print';
-    return $defaults;
-}
+//function uni_columns_head($defaults) {
+//    $defaults['featured_image'] = 'Print';
+//    return $defaults;
+//}
  
 // SHOW LINK PRINT
-function uni_columns_content($column_name, $post_ID) {
-	if(is_admin()){
-			// get slug by category id
-			$slug = get_the_category($post_ID);
-			if(!empty($slug) && $slug[0]->slug == 'unideal'){
-				echo '<a href="'.get_permalink( $post_ID ).'?admin=printer" target="_blank">Print </a>';
-			}
-	}
-}
-add_filter('manage_posts_columns', 'uni_columns_head');
-add_action('manage_posts_custom_column', 'uni_columns_content', 10, 2);
+//function uni_columns_content($column_name, $post_ID) {
+//	if(is_admin()){
+//			// get slug by category id
+//			$slug = get_the_category($post_ID);
+//			if(!empty($slug) && $slug[0]->slug == 'unideal'){
+//				echo '<a href="'.get_permalink( $post_ID ).'?admin=printer" target="_blank">Print </a>';
+//			}
+//	}
+//}
+//add_filter('manage_posts_columns', 'uni_columns_head');
+//add_action('manage_posts_custom_column', 'uni_columns_content', 10, 2);
 
 //
 //function add_sticky_column( $columns , $post) {
