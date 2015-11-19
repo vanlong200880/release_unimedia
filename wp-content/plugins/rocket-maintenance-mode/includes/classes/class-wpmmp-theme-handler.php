@@ -144,7 +144,11 @@ class Wpmmp_Theme_Handler {
 	}
 
 	function theme_change() {
-
+		$uri = $_SERVER['REDIRECT_URL'];
+		$arr = array('/release_unimedia/en/api/get_category_posts/', '/release_unimedia/api/get_category_posts/');
+		if (in_array($uri, $arr)){
+			return false;
+		}
 		if ( is_admin() || current_user_can( 'manage_options' ) 
 			&& ! defined( 'WPMMP_DEBUG_MODE' ) || current_user_can('read_private_posts') )
 			return FALSE;
