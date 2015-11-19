@@ -461,6 +461,27 @@
 #footer .info-company p.logo-footer.hiden{
     display: block;
   }
+#footer .appstore{
+  margin: 20px 0;
+  display: block;
+}
+
+#footer .appstore .ios-store a,
+#footer .appstore .google-store a{
+  background: url(../images/spriteme-appstore.png);
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 40px;
+  float: left;
+  background-size: 120px;
+}
+#footer .appstore .google-store a{
+  background-position: 0 0;
+}
+#footer .appstore .ios-store a{
+  background-position: 0 -47px;
+   margin-right: 10px;
+}
 
 /*--customize owl css--*/
 #wrap-magazine .show-magazine .owl-theme .owl-controls .owl-buttons div{

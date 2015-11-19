@@ -542,6 +542,16 @@
 	#footer .info-company p.logo-footer.hiden{
 		display: none;
 	}
+	#footer .appstore .ios-store a,
+	#footer .appstore .google-store a{
+	  width: 100px;
+	  height: 33px;
+	  background-size: 100px;
+	}
+	#footer .appstore .ios-store a{
+	  background-position: 0 -40px;
+	   margin-right: 5px;
+	}
 	/*--categories details--*/
 	#wrapp-details .show-details .content-details img{
 	  padding: 0;

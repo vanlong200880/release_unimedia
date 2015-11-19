@@ -85,6 +85,15 @@ best choice for all companies to bring products & services to millions of custom
                             </p>
 
                         </div>
+                        <div class="appstore">
+                            <div class="ios-store">
+                                <a href=""></a>
+                            </div>
+                            <div class="google-store">
+                                <a href=""></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
 
                 </div>
