@@ -543,6 +543,12 @@
 #wrapp-details .show-details p{
   margin: 20px 0;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+}
+#wrapp-details .show-details p,
+#wrapp-details .show-details span,
+#wrapp-details .show-details em{
+  line-height: 1.8;
 }
 #wrapp-details .page-header{
   margin: 0px 0 20px;
