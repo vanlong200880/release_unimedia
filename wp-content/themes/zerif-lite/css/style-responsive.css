@@ -349,6 +349,10 @@
 	}
 	#header .navigation nav.navbar-default .navbar-toggle {
 	  margin-top: 10px;
+	  border-color: #999;
+	}
+	#header .navigation nav.navbar-default .navbar-toggle .icon-bar{
+	  background-color: #434343;
 	}
 	#header .navigation nav.navbar-default .navbar-nav>li>a{
 		font-size: 12px;
