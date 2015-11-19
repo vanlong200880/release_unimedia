@@ -650,3 +650,12 @@
 .not-found .page-header{
   margin: 0px 0 20px;
 }
+body.category-unideal .wrapp-categories .show-article p{
+	margin-top: 0;
+}
+#btnPrint{
+	font-size: 28px;
+	border-bottom: 1px solid #D5D5D5;
+	display: block;
+	width: 100%;
+}

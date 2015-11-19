@@ -51,34 +51,37 @@ $category = get_the_category($post->ID);
 <?php
 if(empty($category[0]->category_parent)):
 get_header(); ?>
-<section id="wrap-new-adv">
+<!--<section id="wrap-new-adv">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <?php get_template_part('template-small/advertisement'); ?>
-            </div><!-- /col-md-6 -->
+                <?php //get_template_part('template-small/advertisement'); ?>
+            </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="row">
-                    <?php get_template_part('template-small/advertisement_four'); ?>
-                    <!--end top-sub-adv-->								
+                    <?php //get_template_part('template-small/advertisement_four'); ?>							
                 </div>
-            </div><!-- /col-md-6 -->
-        </div>
-    </div>
-</section><!--end wrap-new-adv-->
-
-
-<section id="wrap-magazine">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                    <?php get_template_part('template-small/magazine'); ?>
-                <!--end show-magazine-->
             </div>
         </div>
     </div>
-</section><!--end wrap-magazine-->
+</section>-->
+
+<!--end wrap-new-adv-->
+
+
+<!--<section id="wrap-magazine">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                    <?php //get_template_part('template-small/magazine'); ?>
+                end show-magazine
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!--end wrap-magazine-->
 
 
 
@@ -98,13 +101,43 @@ get_header(); ?>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-12">
+			<?php if($category[0]->slug =='unideal'): ?>
+			<div class="col-md-8 col-sm-8 col-xs-12">
+				<div class="row">
+					<div class="col-md-12">
+						<a id="btnPrint"><i class="fa fa-print" title="Print"></i></a>
+						<script type="text/javascript">
+							jQuery(document).ready(function($){
+								$("#btnPrint").on("click", function () {
+								var divContents = $("#dvContainer").html();
+								var printWindow = window.open('', '');
+								printWindow.document.write('<html><head><title><?php the_title(); ?></title>');
+								printWindow.document.write('</head><body >');
+								printWindow.document.write(divContents);
+								printWindow.document.write('</body></html>');
+								printWindow.document.close();
+								printWindow.print();
+								printWindow.close();
+							});
+							});
+						</script>
+					</div>
+				</div>
+                <div class="show-details" id="dvContainer">
+                        <?php while ( have_posts() ) : the_post(); 
+						the_content();
+                       endwhile; // end of the loop. ?>
+                </div>
+            </div>
+				<?php else: ?>
+			<div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="show-details">
                         <?php while ( have_posts() ) : the_post(); 
                             get_template_part( 'content', 'single' );
                        endwhile; // end of the loop. ?>
                 </div>
             </div>
+				<?php endif; ?>          
             <?php 
                 $featured = array (					 
                     'post_status'    => 'publish',		
