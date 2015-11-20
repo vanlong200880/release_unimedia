@@ -60,7 +60,7 @@ if(!empty($keyword)):
                                         <?php
                                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                                             if (!empty($attachment_id)) { 
-                                                the_post_thumbnail(array(436, 616));
+                                                the_post_thumbnail(array(480, 701));
                                                 ?>
                                             <?php }else{
                                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
