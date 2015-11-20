@@ -67,7 +67,7 @@
 		width: 100%;
 	}
 	#header .top-header-tablet ul.unimedia-services li{
-		display: inline-block;
+		display: block;
 		float: left;
 		width: 16.66666666666667%;
 		/*margin-right: 0.2%;*/
@@ -81,8 +81,6 @@
 		padding-left: 19px;
 	}
 	#header .top-header-tablet ul.unimedia-services li:last-child{
-		/*width: 16.66666%;*/
-		/*margin-right: 0;*/
 		border-right: none;
 	}
 	#header .top-header-tablet ul.unimedia-services li div.services p a{
@@ -96,6 +94,7 @@
 	#header .top-header-tablet {
 	    margin: 0px 0 10px;
 	    padding:0;
+	    width: 100%;
 	}
 	#header .navigation nav.navbar-default .navbar-nav>li>a{
 		font-size: 12px;
@@ -233,7 +232,28 @@
 		height: 303px;
 		overflow: hidden;
 	}
-	
+	#header .top-header-tablet ul.unimedia-services li div.services p a{
+		font-size: 10px;
+	}
+	#header .top-header-tablet ul.unimedia-services li div.services p{
+		padding-left: 27px;
+	}
+	#header .top-header-tablet ul.unimedia-services li div.services.health p,
+	#header .top-header-tablet ul.unimedia-services li div.services.four-seasons p{
+		padding-left: 25px;
+	}
+	#header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-health-01:before,
+	#header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-promotion-01:before,
+	#header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-real-01:before,
+	#header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-taste-01:before,
+	#header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-elect-01:before,
+	#header .top-header-tablet ul.unimedia-services li div.services span.icon-icon-car-01:before{
+	  left: 2px;
+	}
+	#header .top-header-tablet ul.unimedia-services li:last-child{
+		width: 17%;
+		border-right: none;
+	}
 }
 @media (max-width:767px){
 	h2{
