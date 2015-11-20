@@ -345,6 +345,7 @@ function zerif_scripts() {
     wp_enqueue_script('jquery_script', get_template_directory_uri() . '/js/jquery.js', array(), '20120206', true);
     wp_enqueue_script('zerif_bootstrap_script', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20120207', true);
     wp_enqueue_script('jquery_script_owl', get_template_directory_uri() . '/js/owl.carousel.js', array(), '20120207', true);
+	wp_enqueue_script('jquery_script_common', get_template_directory_uri() . '/js/common.js', array(), '201202010', true);
     /* Knob script */
     //wp_enqueue_script('zerif_knob_nav', get_template_directory_uri() . '/js/jquery.knob.js', array("jquery"), '20120206', true);
 

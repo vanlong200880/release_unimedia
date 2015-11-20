@@ -88,8 +88,8 @@
    #fb5 #fb5-button-back{
 	color:#FFFFFF;
 	position:absolute;
-	left:-5px;
-	top:45px;
+	right: 20px;
+	top: 20px;
 	background-color:#64C8D3;
 	border-radius: 4px 4px 4px 4px;
 	padding:5px;
@@ -97,7 +97,6 @@
 	padding-right:10px;
 	font-size:12px;
 	font-weight:bold;
-	margin-top:-45px;
   }
   #fb5 #fb5-button-back:hover{
 	color:#64C8D3;  

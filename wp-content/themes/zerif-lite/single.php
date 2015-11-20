@@ -255,7 +255,35 @@ get_header(); ?>
 <!-- BEGIN FLIPBOOK STRUCTURE -->  
 <div id="fb5-ajax">	
       <!-- BEGIN HTML BOOK -->      
-      <div data-current="magazine" class="fb5" id="fb5">                
+      <div data-current="magazine" class="fb5" id="fb5">     
+		  <!-- PRELOADER -->
+            <div class="fb5-preloader">
+            <div id="wBall_1" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_2" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_3" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_4" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_5" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            </div>      
+      
+            <!-- BACK BUTTON -->
+            <a href="#" id="fb5-button-back"><?php echo ($language =='vi') ?'Đóng' : 'Close'; ?></a>
+			
+			
             <!-- BACKGROUND FOR BOOK -->  
             <div class="fb5-bcg-book"></div>                      
             <!-- BEGIN CONTAINER BOOK -->
@@ -397,10 +425,16 @@ get_header(); ?>
     "gotopage_width":"30",
     "deeplinking_enabled":"true",
     "rtl":"false",
-    'full_area':'false',
+    'full_area':'true',
 	'lazy_loading_thumbs':'true',
 	'lazy_loading_pages':'true'
     })
+	
+	jQuery(document).ready(function($){
+		$("#fb5-button-back").on('click', function(){
+			window.close();
+		});
+	});
     </script>
 </div>
 <!-- END FLIPBOOK STRUCTURE -->    
@@ -479,7 +513,8 @@ get_header(); ?>
         history: false,
         focus: false,
         showAnimationDuration: 0,
-        hideAnimationDuration: 0
+        hideAnimationDuration: 0,
+		preloaderEl: true
     };
     
     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
