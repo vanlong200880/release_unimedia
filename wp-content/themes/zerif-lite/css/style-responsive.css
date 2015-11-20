@@ -106,6 +106,9 @@
 	#wrap-magazine .show-magazine ul li figure figcaption p a{
 		font-size: 8.4px;
 	}
+	#wrap-magazine .show-magazine.magazine-search ul li figure figcaption p a{
+		font-size: 14px;
+	}
 	#wrap-new-adv .big-new-adv .show-adv figure figcaption{
 		padding: 5px;
 		font-size: 12px;
