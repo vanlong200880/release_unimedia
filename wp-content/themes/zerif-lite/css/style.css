@@ -520,6 +520,8 @@
 /*--categories details--*/
 #wrapp-details .show-details{
   font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
+  padding: 30px;
 }
 #wrapp-details .show-details h1, 
 #wrapp-details .show-details h2, 
@@ -534,17 +536,23 @@
 #wrapp-details .show-details ul, 
 #wrapp-details .show-details ol{
   list-style: inherit;
-  margin: inherit;
-  padding: inherit;
+  margin: 0;
+  padding:0 0 0 47px;
 }
 #wrapp-details .show-details h5{
   margin-top: 0;
 }
+#wrapp-details .wrapp-breadcrumb .breadcrumb{
+  background-color: #efefef;
+}
 .article-all .wrapp-categories .show-article{
   min-height: 330px;
 }
+#wrapp-details .top-sub-featured .show-article{
+  min-height: 260px;
+}
 #wrapp-details .show-details img{
-  padding: 0 30px;
+  /*padding: 0 30px;*/
 }
 #wrapp-details .show-details p{
   margin: 20px 0;
