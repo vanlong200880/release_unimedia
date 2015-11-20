@@ -136,6 +136,18 @@
 	#wrap-magazine.wrap-magazine-related .show-magazine ul li:last-child{
 		margin-right: 0%
 	}
+	#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li{
+	  width: 23.5%;
+	  margin-bottom: 20px;
+	  margin-right: 2%;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li:nth-child(5n+5){
+		margin-right: 2%;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li:nth-child(4n+4){
+		margin-right: 0;
+	}
+	
 	/*--categories details--*/
 	#wrapp-details .show-details .content-details img{
 	  padding: 0;
@@ -559,6 +571,11 @@
 	#wrap-magazine .show-magazine ul div.owl-item{
 		margin:0px;
 	}
+	#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li{
+	  width: 100%;
+	  margin-bottom: 20px;
+	  margin-right: 0;
+	}
 	/*--footer--*/
 	#footer{
 		padding: 15px 0;
@@ -665,7 +682,17 @@
 	#header .top-header-sp ul.unimedia-services li div.services ul.dropdown-menu li a{
 		font-size: 14px;
 	}
-
+	#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li{
+	  width: 49%;
+	  margin-bottom: 20px;
+	  margin-right: 2%;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li:nth-child(5n+5){
+		margin-right: 2%;
+	}
+	#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li:nth-child(2n+2){
+		margin-right: 0;
+	}
 }
 @media (max-width: 480px){
 	#health-taste.article-all.health-taste .show-article  div.show-article-thumb.col-xs-4{

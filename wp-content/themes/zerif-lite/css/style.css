@@ -276,6 +276,14 @@
   width: 218px;
   /*height: 308px;*/
 }
+#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li{
+  width: 212px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#wrap-magazine.wrap-magazine-related .show-magazine.magazine-search ul li:nth-child(5n+5){
+  margin-right: 0;
+}
 #wrap-magazine .show-magazine ul li:last-child{
   margin-right: 0px;
 }
@@ -553,6 +561,7 @@
   min-height: 200px;
 }
 #wrapp-details .show-details img{
+  text-align: center;
   /*padding: 0 30px;*/
 }
 #wrapp-details .show-details p{
