@@ -146,10 +146,8 @@ class Wpmmp_Theme_Handler {
 	function theme_change() {
 		$uri = $_SERVER['REDIRECT_URL'];
 		$uri = explode('/', $uri);
-		var_dump($uri);
 		if (in_array('api', $uri)){
 		}else{
-			var_dump('sdf');
 			if ( is_admin() || current_user_can( 'manage_options' ) 
 				&& ! defined( 'WPMMP_DEBUG_MODE' ) || current_user_can('read_private_posts') )
 				return FALSE;

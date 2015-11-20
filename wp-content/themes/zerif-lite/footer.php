@@ -64,7 +64,7 @@ best choice for all companies to bring products & services to millions of custom
                         <div class="wrap-chat">
                             <p>
                                 <span><i class="fa fa-envelope"></i></span>
-                                <a href="">nhansu@unimedia.vn</a>	
+                                <a href="">contact@unimedia.vn</a>	
                             </p>
                             <p>
                                 <span><i class="fa fa-mobile"></i></span>
@@ -73,15 +73,13 @@ best choice for all companies to bring products & services to millions of custom
 
                             <p>
                                 <span><i class="fa fa-skype"></i></span> 
-                                <a href="">Skype chat 2</a>		
+                                <a href="skype:sale.vinarealtor?chat">Sale Vinarealtor</a>	
+								
+								
                             </p>
                             <p>
                                 <span><i class="fa fa-skype"></i></span> 
-                                <a href="">Skype chat 2</a>	
-                            </p>
-                            <p>
-                                <span><i class="fa fa-skype"></i></span> 
-                                <a href="">Skype chat 2</a>		
+                                <a href="skype:sale.unimedia?chat">Sale Unimedia</a>	
                             </p>
 
                         </div>
@@ -105,31 +103,35 @@ best choice for all companies to bring products & services to millions of custom
 <a id="support"><?php echo ($language == 'vi')? 'Tư vấn <br> online': 'Support <br> online'; ?></a>
 <div class="support">
     <div class="group-support">
+		
+		
+		<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
         <p class="title-support">Sales Bất Động Sản</p>
-        <span><i class="fa fa-skype"></i></span> 
-        <a href="">Skype chat 1</a>     
+        <div id="SkypeButton_Call_sale.vinarealtor_1">
+		
+		 <script type="text/javascript">
+		 Skype.ui({
+		 "name": "chat",
+		 "element": "SkypeButton_Call_sale.vinarealtor_1",
+		 "participants": ["sale.vinarealtor"],
+		 "imageSize": 24
+		 });
+		 </script>
+		 </div> 
     </div>
     <div class="group-support">
         <p class="title-support">Sales Tạp Chí</p>
         <p>
-            <span><i class="fa fa-skype"></i></span> 
-            <a href="">Skype chat 1</a>     
-        </p>
-        <p>
-            <span><i class="fa fa-skype"></i></span> 
-            <a href="">Skype chat 2</a>     
-        </p>
-        <p>
-            <span><i class="fa fa-skype"></i></span> 
-            <a href="">Skype chat 3</a>     
-        </p>
-        <p>
-            <span><i class="fa fa-skype"></i></span> 
-            <a href="">Skype chat 4</a>     
-        </p>
-        <p>
-            <span><i class="fa fa-skype"></i></span> 
-            <a href="">Skype chat 5</a>     
+            <span id="SkypeButton_Call_sale.unimedia_1">
+				<script type="text/javascript">
+				Skype.ui({
+				"name": "chat",
+				"element": "SkypeButton_Call_sale.unimedia_1",
+				"participants": ["sale.unimedia"],
+				"imageSize": 24
+				});
+				</script>
+			</span> 
         </p>
     </div>
     

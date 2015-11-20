@@ -596,7 +596,7 @@
     background: #292663;
     position:  fixed;
     right: -200px;
-    top: 25%;
+    bottom: 25%;
     color: #fff;
     -webkit-transition: right 0.2s;
     transition: right 0.2s;
@@ -645,6 +645,12 @@
     cursor: pointer;
     z-index: 999;
 }
+.group-support img{
+	padding: 0 !important;
+	margin: 0 !important;
+	vertical-align: 0 !important;
+}
+
 .data-empty{
     line-height: 150px;
     border: 1px solid #DDD;
