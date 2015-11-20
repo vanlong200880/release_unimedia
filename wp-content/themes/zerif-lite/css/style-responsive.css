@@ -140,13 +140,21 @@
 	#wrapp-details .show-details .content-details img{
 	  padding: 0;
 	}
-	.article-all .wrapp-categories figure figcaption a,
-	.article-all .top-sub-featured figure figcaption a{
+	.article-all .wrapp-categories figure figcaption a{
 		font-size: 14px;
+	}
+	.article-all .top-sub-featured figure figcaption a{
+		font-size: 13px;
 	}
 	.article-all .wrapp-categories figure figcaption div.readmore a,
 	.article-all .top-sub-featured figure figcaption div.readmore a{
 		font-size: 10px;
+	}
+	.article-all .show-article figure figcaption{
+		margin: 5px 0 15px;
+	}
+	.article-all .show-article figure figcaption p{
+		margin-top: 5px;
 	}
 	#wrap-new-adv .big-new-adv{
 		height: 230px;
