@@ -225,6 +225,10 @@
 	#footer .appstore .ios-store a{
 	   margin-bottom: 5px;
 	}
+	/*--deatails page--*/
+	#wrapp-details .top-sub-featured .show-article{
+	  min-height: 220px;
+	}
 	
 }
 @media screen and (max-width: 1024px) and (orientation: landscape){
@@ -592,6 +596,9 @@
 	  padding: 0;
 	}
 	.article-all .wrapp-categories .show-article{
+	  min-height: auto;
+	}
+	#wrapp-details .top-sub-featured .show-article{
 	  min-height: auto;
 	}
     .zopim{
