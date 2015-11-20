@@ -49,7 +49,7 @@ if(!empty($keyword)):
                         <span class="icon-dotted-01"></span>
                     </div>
                 </div><!--end title-->
-                <div class="show-magazine" >
+                <div class="show-magazine magazine-search" >
                     <ul id="owl-product-carousel1" class="row">
                         <?php
                         while ($the_query->have_posts()){
