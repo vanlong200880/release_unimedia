@@ -73,6 +73,13 @@
 		/*margin-right: 0.2%;*/
 		border-right: 1px solid #fff;
 	}
+	#header .top-header-tablet ul.unimedia-services li div.services p{
+		padding-left: 22px;
+	}
+	#header .top-header-tablet ul.unimedia-services li div.services.health p,
+	#header .top-header-tablet ul.unimedia-services li div.services.four-seasons p{
+		padding-left: 19px;
+	}
 	#header .top-header-tablet ul.unimedia-services li:last-child{
 		/*width: 16.66666%;*/
 		/*margin-right: 0;*/
@@ -95,10 +102,10 @@
 		padding:15px 8px;
 	}
 	#wrap-magazine .show-magazine ul li figure figcaption{
-		padding: 5px;
+		padding: 5px 2px;
 	}
 	#wrap-magazine .show-magazine ul li figure figcaption p a{
-		font-size: 10px;
+		font-size: 8.4px;
 	}
 	#wrap-new-adv .big-new-adv .show-adv figure figcaption{
 		padding: 5px;
@@ -215,6 +222,9 @@
 	#support{
 		bottom: 12%;
 		right: 10px;
+	}
+	#footer .appstore .ios-store a{
+	   margin-bottom: 5px;
 	}
 	
 }
