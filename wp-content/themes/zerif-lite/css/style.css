@@ -431,7 +431,7 @@
   -o-transition:  color 300ms, background-color 300ms;
   transition:  color 300ms, background-color 300ms;
   font-size: 50px;
-  color: #DADAD9;
+  color: #fff;
 }
 #footer .icon-social span{
   margin-right: 10px;
@@ -454,7 +454,7 @@
 }
 #footer .wrap-chat i.fa{
   font-size: 20px;
-  color: #DADAD9;
+  color: #fff;
 }
 #footer .wrap-chat i.fa.fa-mobile{
   font-size: 40px;
