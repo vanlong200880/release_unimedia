@@ -50,11 +50,11 @@ if(!empty($keyword)):
                     </div>
                 </div><!--end title-->
                 <div class="show-magazine magazine-search" >
-                    <ul id="owl-product-carousel1" class="row">
+                    <ul id="owl-product-carousel1">
                         <?php
                         while ($the_query->have_posts()){
                             $the_query->the_post(); ?>
-                            <li class="col-md-3">
+                            <li>
                                 <figure>
                                     <a target="_blank" href="<?php the_permalink() ?>">
                                         <?php
