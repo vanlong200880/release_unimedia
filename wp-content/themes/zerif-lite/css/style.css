@@ -531,6 +531,12 @@
   font-size: inherit;
   font-weight: inherit;
 }
+#wrapp-details .show-details ul, 
+#wrapp-details .show-details ol{
+  list-style: inherit;
+  margin: inherit;
+  padding: inherit;
+}
 #wrapp-details .show-details h5{
   margin-top: 0;
 }
