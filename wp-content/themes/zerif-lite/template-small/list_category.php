@@ -35,7 +35,7 @@ $fashion_health_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(767, 511));
+                                the_post_thumbnail('full');
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -54,7 +54,7 @@ $fashion_health_args = array (
                             }else{
 								$excerpt = get_the_excerpt();
                             }
-							echo filter_character($excerpt, 16);
+							echo filter_character($excerpt, 30);
                             ?>
                         </p>
                         <div class="readmore">
@@ -134,7 +134,7 @@ $taste_event_args = array (
                         <?php
                             $attachment_id = get_post_thumbnail_id(get_the_ID());
                             if (!empty($attachment_id)) { 
-                                the_post_thumbnail(array(767, 511));
+                                the_post_thumbnail('full');
                                 ?>
                             <?php }else{
                                 echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -153,7 +153,7 @@ $taste_event_args = array (
                             }else{
 								$excerpt = get_the_excerpt();
                             }
-							echo filter_character($excerpt, 16);
+							echo filter_character($excerpt, 30);
                             ?>
                         </p>
                         <div class="readmore">
