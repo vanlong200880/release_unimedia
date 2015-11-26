@@ -273,7 +273,7 @@ $real_estate_source_args = array (
 
 
 <?php
-$home_electronics = 'home-electrics';
+$home_electronics = 'home-electronics';
 $home_electronics_args = array (					 
 		'post_status'    => 'publish',		
 		'order'          => 'DESC',
@@ -421,7 +421,7 @@ $seasion_promotion_args = array (
 
 
 <?php
-$vihicle_technology = 'vihicle-technology';
+$vihicle_technology = 'vehicle-technology';
 $vihicle_technology_args = array (					 
 		'post_status'    => 'publish',		
 		'order'          => 'DESC',

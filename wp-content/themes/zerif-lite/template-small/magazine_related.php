@@ -11,8 +11,8 @@
         'order'             => 'DESC',
         'parent'            => $parent_obj->term_id,
         'taxonomy'          => 'category',
-        'hide_empty'        => 1 ,
-        'hierarchical' => false,
+        'hide_empty'        => 0 ,
+//        'hierarchical' => false,
 //        'exclude' => '16',
       );
     $categories_related = get_categories( $magazine_related_args ); 

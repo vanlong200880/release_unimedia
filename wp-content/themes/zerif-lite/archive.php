@@ -23,24 +23,6 @@ get_header(); ?>
 </section><!--end wrap-new-adv-->
 
 
-<!--<section id="wrap-magazine">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                    <?php //get_template_part('template-small/magazine'); ?>
-            </div>
-        </div>
-    </div>
-</section>-->
-
-<?php if(is_category('magazine')){
-    //get_template_part('template-small/magazine_related');
-} ?>
-
-<?php if(is_category('magazine')){
-    //get_template_part('template-small/list_category');
-} ?>
-
 <?php 
 $category = get_the_category();
 $parent = get_category($category[0]->category_parent); 
@@ -102,7 +84,7 @@ $parent = get_category($category[0]->category_parent);
 
     <?php get_template_part('template-small/magazine_related'); ?>
     <?php endif; ?>
-
+	
 <?php else: ?>
  <?php if ( have_posts() ) : ?>
 	<section id="wrap-magazine">
@@ -179,7 +161,6 @@ $parent = get_category($category[0]->category_parent);
 							</figcaption>
 						</figure>
 					</div>
-						<!--get_template_part( 'content', get_post_format() );-->
 
 					<?php endwhile;  ?>
 

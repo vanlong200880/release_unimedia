@@ -127,7 +127,7 @@
             ),
             array(
                 'key'		=> 'group_advertisement',
-                'value'     => 'vihicle_technology'
+                'value'     => 'vehicle_technology'
             ),
         ),
         'posts_per_page' => 5,
@@ -189,7 +189,7 @@
                 <?php
                     $attachment_id = get_post_thumbnail_id(get_the_ID());
                     if (!empty($attachment_id)) { 
-                        the_post_thumbnail(array(767, 511));
+                        the_post_thumbnail('full');
                         ?>
                     <?php }else{
                         echo '<img src="'.get_stylesheet_directory_uri().'/images/no-img.jpg" alt="">';
@@ -199,7 +199,7 @@
                     <p><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></p>
                     <p>
                         <?php $website = get_post_custom_values('website', get_the_ID()); ?>
-                        <span>Website: </span><a href="<?php echo $website[0]; ?>" target="_blank"><?php echo $website[0]; ?></a>
+                        <a href="<?php echo $website[0]; ?>" target="_blank"><?php echo $website[0]; ?></a>
                     </p>
                 </figcaption>
             </figure>

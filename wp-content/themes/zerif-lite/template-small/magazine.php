@@ -6,7 +6,7 @@
             'order'             => 'DESC',
             'parent'            => $parent_obj->term_id,
             'taxonomy'          => 'category',
-            'hide_empty'        => 1 ,
+            'hide_empty'        => 0 ,
             'number'    => 6,
           );
         $categories = get_categories( $args ); ?>

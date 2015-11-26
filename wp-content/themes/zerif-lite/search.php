@@ -19,15 +19,16 @@ if(!empty($keyword)):
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $listCategorySlug = '';
     switch ($type){
-    case 'travel-education-magazine':
-    case 'taste-event-magazine':
+    case 'vehicle-technology-magazine':
+    case 'home-electronics-magazine':
     case 'real-estate-source-magazine':
-    case 'health-care-magazine':
+    case 'taste-event-magazine':
+	case 'fashion-health-magazine':
     case '4-seasons-promotion':
         $listCategorySlug .= $type;
         break;
     default :
-        $listCategorySlug .= '4-seasons-promotion,taste-event-magazine,home-electronics-magazine,real-estate-source-magazine, fashion-health-magazine,vihicle-technology-magazine';
+        $listCategorySlug .= 'vehicle-technology-magazine,home-electronics-magazine,real-estate-source-magazine,taste-event-magazine,fashion-health-magazine,4-seasons-promotion';
     }
     if(!empty($listCategorySlug)){
         $args = array(

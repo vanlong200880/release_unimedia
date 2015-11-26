@@ -554,12 +554,27 @@
 #wrapp-details .wrapp-breadcrumb .breadcrumb{
   background-color: #efefef;
 }
+#real-estate.article-all .show-article,
 .article-all .wrapp-categories .show-article{
-  min-height: 330px;
+  min-height: 320px;
+}
+#health-taste.health-taste .show-article.col-md-12{
+	min-height: 510px;
+}
+body.category-unideal .article-all .wrapp-categories .show-article{
+	min-height: 290px;
 }
 #wrapp-details .top-sub-featured .show-article{
-  min-height: 200px;
+  min-height: 185px;
 }
+.top-sub-featured .show-article figure figcaption{
+	margin: 5px 0 0;
+}
+.top-sub-featured .show-article figure figcaption a{
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
 #wrapp-details .show-details img{
   text-align: center;
   /*padding: 0 30px;*/

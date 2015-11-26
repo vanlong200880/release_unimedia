@@ -175,7 +175,7 @@ get_header(); ?>
                                     </a>
                                     <figcaption>
                                         <a href="<?php the_permalink() ?>" title="<?php echo get_the_title(); ?>">
-                                            <?php echo filter_character(get_the_title(), 8); ?>
+                                            <?php echo get_the_title()?>
                                         </a>
                                         <p>
 											<?php 
