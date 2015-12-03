@@ -150,7 +150,7 @@ get_header(); ?>
                 );
                 $featured_the_query = new WP_Query( $featured ); 
                 if($featured_the_query){ ?>
-                <div class="col-md-4 col-sm-4 col-xs-12 article-all">
+			<div id="sidebar" class="col-md-4 col-sm-4 col-xs-12 article-all">
                     <div class="page-header">
                         <h2><?php echo ($language =='vi')?'Bài liên quan':'Featured'; ?></h2>
                     </div>
@@ -356,13 +356,13 @@ get_header(); ?>
                         <a title="ZOOM OUT " class="fb5-zoom-out"></a>
                     </li>                                
                     <!-- icon_zoom_auto -->
-                    <li>
+<!--                    <li>
                         <a title="ZOOM AUTO " class="fb5-zoom-auto"></a>
-                    </li>                                
+                    </li>                                -->
                     <!-- icon_zoom_original -->
-                    <li>
+<!--                    <li>
                         <a title="ZOOM ORIGINAL (SCALE 1:1)" class="fb5-zoom-original"></a>
-                    </li>
+                    </li>-->
                     <!-- icon_allpages -->
                     <li>
                         <a title="SHOW ALL PAGES " class="fb5-show-all"></a>
@@ -418,7 +418,7 @@ get_header(); ?>
     "page_height":"635",
 	"email_form":"vanlong200880@gmail.com",
     "zoom_double_click":"1",
-    "zoom_step":"0.01",
+    "zoom_step":"0.3",
     "double_click_enabled":"true",
     "tooltip_visible":"true",
     "toolbar_visible":"true",
@@ -533,6 +533,29 @@ openPhotoSwipe();
 <?php endif; ?>
 
 <?php endif;?>
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript">
+    var summaries = $('#sidebar');
+        summaries.each(function(i) {
+            var summary = $(summaries[i]);
+            var next = summaries[i + 1];
+
+            summary.scrollToFixed({
+                marginTop: 10,
+                limit: function() {
+                    var limit = 0;
+                    if (next) {
+                        limit = $(next).offset().top - $(this).outerHeight(true) - 10;
+                    } else {
+                        limit = $('footer').offset().top - $(this).outerHeight(true) - 10;
+                    }
+                    return limit;
+                },
+                zIndex: 999,
+
+            });
+        });
+</script>
 
 
 

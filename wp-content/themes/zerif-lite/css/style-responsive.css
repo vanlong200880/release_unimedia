@@ -26,6 +26,9 @@
 /* iPads (portrait) ----------- */
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
+	#btnPrint{
+		display: none;
+	}
 	#wrapp-details .show-details .content-details img{
 	  margin-bottom: 10px;
 	}
@@ -334,7 +337,9 @@
 	}
 }
 @media (max-width:767px){
-	
+	#btnPrint{
+		display: none;
+	}
 	#wrapp-details .show-details p{
 		margin: 0;
 	}

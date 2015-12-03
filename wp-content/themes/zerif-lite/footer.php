@@ -211,6 +211,23 @@ best choice for all companies to bring products & services to millions of custom
           });
         });
     </script>
+	<?php if(wpmd_is_notdevice()): ?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var headerOffset = $('#header').offset().top;
+			$(window).scroll(function(){
+				var header = $('#header'),
+					scroll = $(window).scrollTop();
+				if (scroll > headerOffset){ 
+					header.addClass('fixed');
+				}else {
+					header.removeClass('fixed');
+				}
+			});
+		});
+	</script>
+	<?php endif; ?>
+	
         <?php if(!wpmd_is_phone()): ?>
         <script type="text/javascript">
             jQuery(document).ready(function($) {

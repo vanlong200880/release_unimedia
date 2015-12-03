@@ -187,3 +187,17 @@ $parent = get_category($category[0]->category_parent);
 	<?php endif; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
+
+	<script>
+		
+    jQuery(document).ready(function($){
+		var heightHeader        = $("#header").height();
+        var sliderHeight        = $("#wrap-new-adv").height();
+        var blockDepositHeight  = $("#wrap-magazine").height();
+        var total = heightHeader+sliderHeight+blockDepositHeight + 150;
+		console.log(total);
+		 $('html, body').scrollTop(total).delay( 2000 );
+//        $('html, body').stop().animate({scrollTop : total}, 0);
+		return false;
+	});
+	</script>
